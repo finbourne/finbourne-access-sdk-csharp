@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finbourne.Access.Sdk", "Finbourne.Access.Sdk\Finbourne.Access.Sdk.csproj", "{229AE3A0-7C80-4897-ADD5-4694E8059054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finbourne.Access.Sdk.Tests", "Finbourne.Access.Sdk.Tests\Finbourne.Access.Sdk.Tests.csproj", "{232DFCEB-722C-4C07-A225-D4CF2BC7A265}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{229AE3A0-7C80-4897-ADD5-4694E8059054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229AE3A0-7C80-4897-ADD5-4694E8059054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229AE3A0-7C80-4897-ADD5-4694E8059054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229AE3A0-7C80-4897-ADD5-4694E8059054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232DFCEB-722C-4C07-A225-D4CF2BC7A265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232DFCEB-722C-4C07-A225-D4CF2BC7A265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232DFCEB-722C-4C07-A225-D4CF2BC7A265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232DFCEB-722C-4C07-A225-D4CF2BC7A265}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

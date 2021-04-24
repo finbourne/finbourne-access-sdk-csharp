@@ -1,0 +1,9 @@
+{
+  "packageName": "Finbourne.Access.Sdk",
+  "sourceFolder": ".",
+  "targetFramework": "v5.0",
+  "useDateTimeOffset": true,
+  "netCoreProjectFile": true,
+  "returnICollection": true,
+  "packageVersion": "0.1.0"
+}
