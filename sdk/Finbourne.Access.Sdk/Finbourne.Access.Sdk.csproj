@@ -8,7 +8,7 @@
         <Company>FINBOURNE Technology Limited</Company>
         <Product>FINBOURNE Access</Product>
         <Description>FINBOURNE Access SDK</Description>
-        <RepositoryUrl>https://github.com/finbourne/finbourne-access-csharp-sdk</RepositoryUrl>
+        <RepositoryUrl>https://github.com/finbourne/finbourne-access-sdk-csharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
