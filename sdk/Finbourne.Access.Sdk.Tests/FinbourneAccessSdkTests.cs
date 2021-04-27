@@ -2,7 +2,7 @@ using Finbourne.Access.Sdk.Api;
 using Finbourne.Access.Sdk.Utilities;
 using NUnit.Framework;
 
-namespace Finbourne.Acces.Sdk.Tests
+namespace Finbourne.Access.Sdk.Tests
 {
     [TestFixture]
     public class FinbourneAccessSdkTests
