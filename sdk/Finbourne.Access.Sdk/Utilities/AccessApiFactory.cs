@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Finbourne.Access.Sdk.Client;
-using Lusid.Sdk.Utilities;
 using ApiClient = Finbourne.Access.Sdk.Client.ApiClient;
 
 namespace Finbourne.Access.Sdk.Utilities

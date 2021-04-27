@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Lusid.Sdk.Utilities
+namespace Finbourne.Access.Sdk.Utilities
 {
     /// <summary>
     /// Creates an ApiConfiguration 

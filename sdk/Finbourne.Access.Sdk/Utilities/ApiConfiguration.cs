@@ -1,4 +1,4 @@
-namespace Lusid.Sdk.Utilities
+namespace Finbourne.Access.Sdk.Utilities
 {
     /// <summary>
     /// Configuration for the ClientCredentialsFlowTokenProvider, usually sourced from a "secrets.json" file

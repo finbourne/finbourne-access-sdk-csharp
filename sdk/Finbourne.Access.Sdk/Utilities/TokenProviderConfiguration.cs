@@ -1,6 +1,5 @@
 ﻿using System;
 using Finbourne.Access.Sdk.Client;
-using Lusid.Sdk.Utilities;
 
 namespace Finbourne.Access.Sdk.Utilities
 {
