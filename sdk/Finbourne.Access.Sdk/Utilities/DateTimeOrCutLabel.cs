@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 // Namespace needs to be automatically picked up by classes in .Api and .Model
 // ReSharper disable once CheckNamespace
-namespace Lusid.Sdk
+namespace Finbourne.Access.Sdk
 {
     /// <summary>
     /// Entity for specifying a date or a cut label to LUSID.

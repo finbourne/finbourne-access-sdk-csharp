@@ -1,7 +1,6 @@
 using System.Net;
 using Finbourne.Access.Sdk.Client;
 using Finbourne.Access.Sdk.Model;
-using Lusid.Sdk.Utilities;
 using Newtonsoft.Json;
 
 namespace Finbourne.Access.Sdk.Utilities

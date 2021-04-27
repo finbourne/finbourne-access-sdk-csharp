@@ -1,5 +1,3 @@
-using Lusid.Sdk.Utilities;
-
 namespace Finbourne.Access.Sdk.Utilities
 {
     /// <summary>

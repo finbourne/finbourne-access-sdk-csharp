@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Lusid.Sdk.Utilities
+namespace Finbourne.Access.Sdk.Utilities
 {
     /// <summary>
     /// Deserialize JSON by setting property values. This is used to set property values when the

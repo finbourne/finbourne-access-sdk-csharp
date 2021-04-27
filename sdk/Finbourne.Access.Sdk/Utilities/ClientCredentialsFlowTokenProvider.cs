@@ -6,7 +6,6 @@ using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
-using Lusid.Sdk.Utilities;
 using Newtonsoft.Json;
 
 [assembly: InternalsVisibleTo("Finbourne.Access.Sdk.Tests")]
