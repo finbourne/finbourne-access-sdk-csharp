@@ -4,6 +4,9 @@
 | --- | --- |
 | `master` |  ![Nuget](https://img.shields.io/nuget/v/Finbourne.Access.Sdk?color=blue)
 
+# FOR VERSIONS AFTER v0.0.1105
+The latest C# SDK (Preview) supporting `Production`, `Early Access`, `Beta` and `Experimental` API endpoints has moved to https://github.com/finbourne/access-sdk-csharp-preview with the NuGet package available from https://www.nuget.org/packages/Finbourne.Access.Sdk.Preview/.
+
 # FINBOURNE Access C# SDK
 
 The NuGet package for the LUSID SDK can installed from https://www.nuget.org/packages/Finbourne.Access.Sdk using the following:
