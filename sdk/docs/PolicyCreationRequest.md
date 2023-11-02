@@ -1,5 +1,5 @@
-
 # Finbourne.Access.Sdk.Model.PolicyCreationRequest
+Request to create a policy
 
 ## Properties
 
@@ -15,7 +15,5 @@ Name | Type | Description | Notes
 **When** | [**WhenSpec**](WhenSpec.md) |  | 
 **How** | [**HowSpec**](HowSpec.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

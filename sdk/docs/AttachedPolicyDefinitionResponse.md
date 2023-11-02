@@ -1,4 +1,3 @@
-
 # Finbourne.Access.Sdk.Model.AttachedPolicyDefinitionResponse
 
 ## Properties
@@ -6,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SourceRole** | [**RoleId**](RoleId.md) |  | [optional] 
-**RoleHierarchyIndex** | **int?** |  | [optional] 
+**RoleHierarchyIndex** | **int** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Applications** | **List&lt;string&gt;** |  | [optional] 
 **PolicyType** | **PolicyType** |  | [optional] 
@@ -18,7 +17,5 @@ Name | Type | Description | Notes
 **When** | [**WhenSpec**](WhenSpec.md) |  | [optional] 
 **How** | [**HowSpec**](HowSpec.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to README]](../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
