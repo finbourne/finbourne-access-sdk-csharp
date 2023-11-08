@@ -1,6 +1,6 @@
 # Finbourne.Access.Sdk.Api.UserRolesApi
 
-All URIs are relative to *https://fbn-ci.lusid.com/access*
+All URIs are relative to *https://fbn-prd.lusid.com/access*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -37,7 +37,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -135,7 +135,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -233,7 +233,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -329,7 +329,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -421,7 +421,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -517,7 +517,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -619,7 +619,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -715,7 +715,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -811,7 +811,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-ci.lusid.com/access";
+            config.BasePath = "https://fbn-prd.lusid.com/access";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
