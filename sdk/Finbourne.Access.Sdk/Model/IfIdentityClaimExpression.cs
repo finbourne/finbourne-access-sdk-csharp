@@ -43,7 +43,7 @@ namespace Finbourne.Access.Sdk.Model
         /// Initializes a new instance of the <see cref="IfIdentityClaimExpression" /> class.
         /// </summary>
         /// <param name="claimType">claimType (required).</param>
-        /// <param name="claimValueType">claimValueType (required).</param>
+        /// <param name="claimValueType">claimValueType.</param>
         /// <param name="claimIssuer">claimIssuer.</param>
         /// <param name="claimOriginalIssuer">claimOriginalIssuer.</param>
         /// <param name="_operator">_operator (required).</param>
@@ -56,13 +56,8 @@ namespace Finbourne.Access.Sdk.Model
                 throw new ArgumentNullException("claimType is a required property for IfIdentityClaimExpression and cannot be null");
             }
             this.ClaimType = claimType;
-            // to ensure "claimValueType" is required (not null)
-            if (claimValueType == null)
-            {
-                throw new ArgumentNullException("claimValueType is a required property for IfIdentityClaimExpression and cannot be null");
-            }
-            this.ClaimValueType = claimValueType;
             this.Operator = _operator;
+            this.ClaimValueType = claimValueType;
             this.ClaimIssuer = claimIssuer;
             this.ClaimOriginalIssuer = claimOriginalIssuer;
             this.Value = value;
@@ -77,7 +72,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <summary>
         /// Gets or Sets ClaimValueType
         /// </summary>
-        [DataMember(Name = "claimValueType", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "claimValueType", EmitDefaultValue = true)]
         public string ClaimValueType { get; set; }
 
         /// <summary>
@@ -223,12 +218,6 @@ namespace Finbourne.Access.Sdk.Model
             if (this.ClaimType != null && this.ClaimType.Length < 1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ClaimType, length must be greater than 1.", new [] { "ClaimType" });
-            }
-
-            // ClaimValueType (string) minLength
-            if (this.ClaimValueType != null && this.ClaimValueType.Length < 1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ClaimValueType, length must be greater than 1.", new [] { "ClaimValueType" });
             }
 
             yield break;

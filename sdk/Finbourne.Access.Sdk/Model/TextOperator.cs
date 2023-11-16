@@ -74,7 +74,13 @@ namespace Finbourne.Access.Sdk.Model
         /// Enum NotPresent for value: NotPresent
         /// </summary>
         [EnumMember(Value = "NotPresent")]
-        NotPresent = 8
+        NotPresent = 8,
+
+        /// <summary>
+        /// Enum InCaseInsensitive for value: InCaseInsensitive
+        /// </summary>
+        [EnumMember(Value = "InCaseInsensitive")]
+        InCaseInsensitive = 9
 
     }
 

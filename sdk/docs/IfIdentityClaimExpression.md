@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ClaimType** | **string** |  | 
-**ClaimValueType** | **string** |  | 
+**ClaimValueType** | **string** |  | [optional] 
 **ClaimIssuer** | **string** |  | [optional] 
 **ClaimOriginalIssuer** | **string** |  | [optional] 
 **Operator** | **TextOperator** |  | 
