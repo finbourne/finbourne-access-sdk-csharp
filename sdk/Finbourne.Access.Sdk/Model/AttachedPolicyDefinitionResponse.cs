@@ -80,7 +80,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <summary>
         /// Gets or Sets RoleHierarchyIndex
         /// </summary>
-        [DataMember(Name = "roleHierarchyIndex", EmitDefaultValue = false)]
+        [DataMember(Name = "roleHierarchyIndex", EmitDefaultValue = true)]
         public int RoleHierarchyIndex { get; set; }
 
         /// <summary>

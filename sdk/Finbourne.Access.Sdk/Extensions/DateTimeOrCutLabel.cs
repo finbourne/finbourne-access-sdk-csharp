@@ -68,6 +68,10 @@ namespace Finbourne.Access.Sdk
         /// </summary>
         public static implicit operator DateTimeOrCutLabel(string cutLabel)
         {
+            if (cutLabel == null)
+            {
+                return default(DateTimeOrCutLabel);
+            }
             return new DateTimeOrCutLabel(cutLabel);
         }
 

@@ -64,7 +64,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <summary>
         /// Gets or Sets Adjustment
         /// </summary>
-        [DataMember(Name = "adjustment", EmitDefaultValue = false)]
+        [DataMember(Name = "adjustment", EmitDefaultValue = true)]
         public int Adjustment { get; set; }
 
         /// <summary>
