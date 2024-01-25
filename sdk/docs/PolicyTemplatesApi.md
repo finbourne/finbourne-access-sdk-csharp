@@ -401,7 +401,7 @@ catch (ApiException e)
 
 <a id="listpolicytemplates"></a>
 # **ListPolicyTemplates**
-> List&lt;PolicyTemplateResponse&gt; ListPolicyTemplates (DateTimeOffset? asAt = null)
+> ResourceListOfPolicyTemplateResponse ListPolicyTemplates (DateTimeOffset? asAt = null, string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
 
 [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
 
@@ -428,11 +428,15 @@ namespace Example
 
             var apiInstance = new PolicyTemplatesApi(config);
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
+            var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
+            var limit = 56;  // int? | Optional. When paginating, limit the number of returned results to this many. (optional) 
+            var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
+            var page = "page_example";  // string? | Optional. Paging token returned from a previous result (optional) 
 
             try
             {
                 // [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
-                List<PolicyTemplateResponse> result = apiInstance.ListPolicyTemplates(asAt);
+                ResourceListOfPolicyTemplateResponse result = apiInstance.ListPolicyTemplates(asAt, sortBy, limit, filter, page);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -453,7 +457,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
-    ApiResponse<List<PolicyTemplateResponse>> response = apiInstance.ListPolicyTemplatesWithHttpInfo(asAt);
+    ApiResponse<ResourceListOfPolicyTemplateResponse> response = apiInstance.ListPolicyTemplatesWithHttpInfo(asAt, sortBy, limit, filter, page);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -471,10 +475,14 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
+| **sortBy** | **string?** | Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
+| **limit** | **int?** | Optional. When paginating, limit the number of returned results to this many. | [optional]  |
+| **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
+| **page** | **string?** | Optional. Paging token returned from a previous result | [optional]  |
 
 ### Return type
 
-[**List&lt;PolicyTemplateResponse&gt;**](PolicyTemplateResponse.md)
+[**ResourceListOfPolicyTemplateResponse**](ResourceListOfPolicyTemplateResponse.md)
 
 ### Authorization
 
