@@ -51,7 +51,8 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="_if">\&quot;If Specification\&quot; for when the policy is to be applied.</param>
         /// <param name="when">when (required).</param>
         /// <param name="how">how.</param>
-        public PolicyCreationRequest(string code = default(string), string description = default(string), List<string> applications = default(List<string>), Grant grant = default(Grant), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec))
+        /// <param name="templateMetadata">templateMetadata.</param>
+        public PolicyCreationRequest(string code = default(string), string description = default(string), List<string> applications = default(List<string>), Grant grant = default(Grant), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -77,6 +78,7 @@ namespace Finbourne.Access.Sdk.Model
             this.For = _for;
             this.If = _if;
             this.How = how;
+            this.TemplateMetadata = templateMetadata;
         }
 
         /// <summary>
@@ -134,6 +136,12 @@ namespace Finbourne.Access.Sdk.Model
         public HowSpec How { get; set; }
 
         /// <summary>
+        /// Gets or Sets TemplateMetadata
+        /// </summary>
+        [DataMember(Name = "templateMetadata", EmitDefaultValue = false)]
+        public TemplateMetadata TemplateMetadata { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -150,6 +158,7 @@ namespace Finbourne.Access.Sdk.Model
             sb.Append("  If: ").Append(If).Append("\n");
             sb.Append("  When: ").Append(When).Append("\n");
             sb.Append("  How: ").Append(How).Append("\n");
+            sb.Append("  TemplateMetadata: ").Append(TemplateMetadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -232,6 +241,11 @@ namespace Finbourne.Access.Sdk.Model
                     this.How == input.How ||
                     (this.How != null &&
                     this.How.Equals(input.How))
+                ) && 
+                (
+                    this.TemplateMetadata == input.TemplateMetadata ||
+                    (this.TemplateMetadata != null &&
+                    this.TemplateMetadata.Equals(input.TemplateMetadata))
                 );
         }
 
@@ -276,6 +290,10 @@ namespace Finbourne.Access.Sdk.Model
                 if (this.How != null)
                 {
                     hashCode = (hashCode * 59) + this.How.GetHashCode();
+                }
+                if (this.TemplateMetadata != null)
+                {
+                    hashCode = (hashCode * 59) + this.TemplateMetadata.GetHashCode();
                 }
                 return hashCode;
             }

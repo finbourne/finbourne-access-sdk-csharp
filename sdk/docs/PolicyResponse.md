@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **If** | [**List&lt;IfExpression&gt;**](IfExpression.md) | \&quot;If Specification\&quot; for when the policy is to be applied | [optional] 
 **When** | [**WhenSpec**](WhenSpec.md) |  | [optional] 
 **How** | [**HowSpec**](HowSpec.md) |  | [optional] 
+**TemplateMetadata** | [**TemplateMetadata**](TemplateMetadata.md) |  | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

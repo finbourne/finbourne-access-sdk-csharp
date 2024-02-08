@@ -46,8 +46,9 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="_if">\&quot;If Specification\&quot; for when the policy is to be applied.</param>
         /// <param name="when">when.</param>
         /// <param name="how">how.</param>
+        /// <param name="templateMetadata">templateMetadata.</param>
         /// <param name="links">links.</param>
-        public PolicyResponse(PolicyId id = default(PolicyId), string description = default(string), List<string> applications = default(List<string>), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), List<Link> links = default(List<Link>))
+        public PolicyResponse(PolicyId id = default(PolicyId), string description = default(string), List<string> applications = default(List<string>), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata), List<Link> links = default(List<Link>))
         {
             this.Id = id;
             this.Description = description;
@@ -58,6 +59,7 @@ namespace Finbourne.Access.Sdk.Model
             this.If = _if;
             this.When = when;
             this.How = how;
+            this.TemplateMetadata = templateMetadata;
             this.Links = links;
         }
 
@@ -115,6 +117,12 @@ namespace Finbourne.Access.Sdk.Model
         public HowSpec How { get; set; }
 
         /// <summary>
+        /// Gets or Sets TemplateMetadata
+        /// </summary>
+        [DataMember(Name = "templateMetadata", EmitDefaultValue = false)]
+        public TemplateMetadata TemplateMetadata { get; set; }
+
+        /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = true)]
@@ -137,6 +145,7 @@ namespace Finbourne.Access.Sdk.Model
             sb.Append("  If: ").Append(If).Append("\n");
             sb.Append("  When: ").Append(When).Append("\n");
             sb.Append("  How: ").Append(How).Append("\n");
+            sb.Append("  TemplateMetadata: ").Append(TemplateMetadata).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -222,6 +231,11 @@ namespace Finbourne.Access.Sdk.Model
                     this.How.Equals(input.How))
                 ) && 
                 (
+                    this.TemplateMetadata == input.TemplateMetadata ||
+                    (this.TemplateMetadata != null &&
+                    this.TemplateMetadata.Equals(input.TemplateMetadata))
+                ) && 
+                (
                     this.Links == input.Links ||
                     this.Links != null &&
                     input.Links != null &&
@@ -270,6 +284,10 @@ namespace Finbourne.Access.Sdk.Model
                 if (this.How != null)
                 {
                     hashCode = (hashCode * 59) + this.How.GetHashCode();
+                }
+                if (this.TemplateMetadata != null)
+                {
+                    hashCode = (hashCode * 59) + this.TemplateMetadata.GetHashCode();
                 }
                 if (this.Links != null)
                 {

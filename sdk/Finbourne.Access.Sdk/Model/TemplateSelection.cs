@@ -38,7 +38,7 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         /// <param name="scope">Scope identifying policy template to use for generation (required).</param>
         /// <param name="code">Code identifying policy template to use for generation (required).</param>
-        /// <param name="selectorTags">List of selector tags to optionally filter in the template generation   (Eg: API, Data, etc).</param>
+        /// <param name="selectorTags">List of selector tags to optionally filter in the template generation   (Eg: Feature, Data, etc).</param>
         public TemplateSelection(string scope = default(string), string code = default(string), List<string> selectorTags = default(List<string>))
         {
             // to ensure "scope" is required (not null)
@@ -71,9 +71,9 @@ namespace Finbourne.Access.Sdk.Model
         public string Code { get; set; }
 
         /// <summary>
-        /// List of selector tags to optionally filter in the template generation   (Eg: API, Data, etc)
+        /// List of selector tags to optionally filter in the template generation   (Eg: Feature, Data, etc)
         /// </summary>
-        /// <value>List of selector tags to optionally filter in the template generation   (Eg: API, Data, etc)</value>
+        /// <value>List of selector tags to optionally filter in the template generation   (Eg: Feature, Data, etc)</value>
         [DataMember(Name = "selectorTags", EmitDefaultValue = true)]
         public List<string> SelectorTags { get; set; }
 
