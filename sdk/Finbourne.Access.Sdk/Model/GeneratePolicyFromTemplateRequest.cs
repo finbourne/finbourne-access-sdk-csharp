@@ -37,7 +37,8 @@ namespace Finbourne.Access.Sdk.Model
         /// Initializes a new instance of the <see cref="GeneratePolicyFromTemplateRequest" /> class.
         /// </summary>
         /// <param name="templateSelection">List of template selection, identifying policy templates to use for generation (required).</param>
-        public GeneratePolicyFromTemplateRequest(List<TemplateSelection> templateSelection = default(List<TemplateSelection>))
+        /// <param name="selectors">List of additional selectors to be included in the policy.</param>
+        public GeneratePolicyFromTemplateRequest(List<TemplateSelection> templateSelection = default(List<TemplateSelection>), List<SelectorDefinition> selectors = default(List<SelectorDefinition>))
         {
             // to ensure "templateSelection" is required (not null)
             if (templateSelection == null)
@@ -45,6 +46,7 @@ namespace Finbourne.Access.Sdk.Model
                 throw new ArgumentNullException("templateSelection is a required property for GeneratePolicyFromTemplateRequest and cannot be null");
             }
             this.TemplateSelection = templateSelection;
+            this.Selectors = selectors;
         }
 
         /// <summary>
@@ -55,6 +57,13 @@ namespace Finbourne.Access.Sdk.Model
         public List<TemplateSelection> TemplateSelection { get; set; }
 
         /// <summary>
+        /// List of additional selectors to be included in the policy
+        /// </summary>
+        /// <value>List of additional selectors to be included in the policy</value>
+        [DataMember(Name = "selectors", EmitDefaultValue = true)]
+        public List<SelectorDefinition> Selectors { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +72,7 @@ namespace Finbourne.Access.Sdk.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class GeneratePolicyFromTemplateRequest {\n");
             sb.Append("  TemplateSelection: ").Append(TemplateSelection).Append("\n");
+            sb.Append("  Selectors: ").Append(Selectors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,6 +113,12 @@ namespace Finbourne.Access.Sdk.Model
                     this.TemplateSelection != null &&
                     input.TemplateSelection != null &&
                     this.TemplateSelection.SequenceEqual(input.TemplateSelection)
+                ) && 
+                (
+                    this.Selectors == input.Selectors ||
+                    this.Selectors != null &&
+                    input.Selectors != null &&
+                    this.Selectors.SequenceEqual(input.Selectors)
                 );
         }
 
@@ -118,6 +134,10 @@ namespace Finbourne.Access.Sdk.Model
                 if (this.TemplateSelection != null)
                 {
                     hashCode = (hashCode * 59) + this.TemplateSelection.GetHashCode();
+                }
+                if (this.Selectors != null)
+                {
+                    hashCode = (hashCode * 59) + this.Selectors.GetHashCode();
                 }
                 return hashCode;
             }
