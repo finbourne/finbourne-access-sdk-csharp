@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Finbourne.Access.Sdk.Extensions;
 
 namespace Finbourne.Access.Sdk.Client
 {
