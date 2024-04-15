@@ -25,7 +25,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection
         /// </summary>
         /// <remarks>
         /// Add Policies and/or PolicyCollections to a PolicyCollection
@@ -39,7 +39,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyCollectionResponse AddToPolicyCollection(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection
         /// </summary>
         /// <remarks>
         /// Add Policies and/or PolicyCollections to a PolicyCollection
@@ -52,7 +52,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
         ApiResponse<PolicyCollectionResponse> AddToPolicyCollectionWithHttpInfo(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy
+        /// CreatePolicy: Create Policy
         /// </summary>
         /// <remarks>
         /// Creates a Policy
@@ -64,7 +64,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyResponse CreatePolicy(PolicyCreationRequest policyCreationRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy
+        /// CreatePolicy: Create Policy
         /// </summary>
         /// <remarks>
         /// Creates a Policy
@@ -75,7 +75,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyResponse</returns>
         ApiResponse<PolicyResponse> CreatePolicyWithHttpInfo(PolicyCreationRequest policyCreationRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
         /// <remarks>
         /// Creates a PolicyCollection
@@ -87,7 +87,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyCollectionResponse CreatePolicyCollection(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
         /// <remarks>
         /// Creates a PolicyCollection
@@ -98,7 +98,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
         ApiResponse<PolicyCollectionResponse> CreatePolicyCollectionWithHttpInfo(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy
+        /// DeletePolicy: Delete Policy
         /// </summary>
         /// <remarks>
         /// Deletes an identified Policy
@@ -111,7 +111,7 @@ namespace Finbourne.Access.Sdk.Api
         void DeletePolicy(string code, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy
+        /// DeletePolicy: Delete Policy
         /// </summary>
         /// <remarks>
         /// Deletes an identified Policy
@@ -123,7 +123,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
         /// <remarks>
         /// Deletes an identified PolicyCollection
@@ -136,7 +136,7 @@ namespace Finbourne.Access.Sdk.Api
         void DeletePolicyCollection(string code, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
         /// <remarks>
         /// Deletes an identified PolicyCollection
@@ -148,7 +148,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations
+        /// Evaluate: Run one or more evaluations
         /// </summary>
         /// <remarks>
         /// Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
@@ -162,7 +162,7 @@ namespace Finbourne.Access.Sdk.Api
         Dictionary<string, EvaluationResponse> Evaluate(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations
+        /// Evaluate: Run one or more evaluations
         /// </summary>
         /// <remarks>
         /// Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
@@ -208,7 +208,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
         ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy
+        /// GetPolicy: Get Policy
         /// </summary>
         /// <remarks>
         /// Gets an identified Policy
@@ -222,7 +222,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyResponse GetPolicy(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy
+        /// GetPolicy: Get Policy
         /// </summary>
         /// <remarks>
         /// Gets an identified Policy
@@ -235,7 +235,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyResponse</returns>
         ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
         /// <remarks>
         /// Gets an identified PolicyCollection
@@ -249,7 +249,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyCollectionResponse GetPolicyCollection(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
         /// <remarks>
         /// Gets an identified PolicyCollection
@@ -295,7 +295,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of List&lt;PolicyResponse&gt;</returns>
         ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+        /// ListPolicyCollections: List PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
@@ -312,7 +312,7 @@ namespace Finbourne.Access.Sdk.Api
         List<PolicyCollectionResponse> ListPolicyCollections(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+        /// ListPolicyCollections: List PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
@@ -359,7 +359,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfPolicyResponse</returns>
         ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+        /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections with pagination support.
@@ -375,7 +375,7 @@ namespace Finbourne.Access.Sdk.Api
         ResourceListOfPolicyCollectionResponse PagePolicyCollections(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+        /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections with pagination support.
@@ -390,7 +390,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfPolicyCollectionResponse</returns>
         ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
         /// <remarks>
         /// Remove Policies and/or PolicyCollections from a PolicyCollection
@@ -404,7 +404,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyCollectionResponse RemoveFromPolicyCollection(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
         /// <remarks>
         /// Remove Policies and/or PolicyCollections from a PolicyCollection
@@ -417,7 +417,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
         ApiResponse<PolicyCollectionResponse> RemoveFromPolicyCollectionWithHttpInfo(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy
+        /// UpdatePolicy: Update Policy
         /// </summary>
         /// <remarks>
         /// Updates a Policy
@@ -431,7 +431,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyResponse UpdatePolicy(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy
+        /// UpdatePolicy: Update Policy
         /// </summary>
         /// <remarks>
         /// Updates a Policy
@@ -444,7 +444,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyResponse</returns>
         ApiResponse<PolicyResponse> UpdatePolicyWithHttpInfo(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
         /// <remarks>
         /// Updates a PolicyCollection
@@ -458,7 +458,7 @@ namespace Finbourne.Access.Sdk.Api
         PolicyCollectionResponse UpdatePolicyCollection(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
         /// <remarks>
         /// Updates a PolicyCollection
@@ -480,7 +480,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection
         /// </summary>
         /// <remarks>
         /// Add Policies and/or PolicyCollections to a PolicyCollection
@@ -495,7 +495,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyCollectionResponse> AddToPolicyCollectionAsync(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection
         /// </summary>
         /// <remarks>
         /// Add Policies and/or PolicyCollections to a PolicyCollection
@@ -509,7 +509,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> AddToPolicyCollectionWithHttpInfoAsync(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy
+        /// CreatePolicy: Create Policy
         /// </summary>
         /// <remarks>
         /// Creates a Policy
@@ -522,7 +522,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyResponse> CreatePolicyAsync(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy
+        /// CreatePolicy: Create Policy
         /// </summary>
         /// <remarks>
         /// Creates a Policy
@@ -534,7 +534,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> CreatePolicyWithHttpInfoAsync(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
         /// <remarks>
         /// Creates a PolicyCollection
@@ -547,7 +547,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyCollectionResponse> CreatePolicyCollectionAsync(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
         /// <remarks>
         /// Creates a PolicyCollection
@@ -559,7 +559,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> CreatePolicyCollectionWithHttpInfoAsync(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy
+        /// DeletePolicy: Delete Policy
         /// </summary>
         /// <remarks>
         /// Deletes an identified Policy
@@ -573,7 +573,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task DeletePolicyAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy
+        /// DeletePolicy: Delete Policy
         /// </summary>
         /// <remarks>
         /// Deletes an identified Policy
@@ -586,7 +586,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
         /// <remarks>
         /// Deletes an identified PolicyCollection
@@ -600,7 +600,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task DeletePolicyCollectionAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
         /// <remarks>
         /// Deletes an identified PolicyCollection
@@ -613,7 +613,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations
+        /// Evaluate: Run one or more evaluations
         /// </summary>
         /// <remarks>
         /// Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
@@ -628,7 +628,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<Dictionary<string, EvaluationResponse>> EvaluateAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations
+        /// Evaluate: Run one or more evaluations
         /// </summary>
         /// <remarks>
         /// Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
@@ -677,7 +677,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;AttachedPolicyDefinitionResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy
+        /// GetPolicy: Get Policy
         /// </summary>
         /// <remarks>
         /// Gets an identified Policy
@@ -692,7 +692,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy
+        /// GetPolicy: Get Policy
         /// </summary>
         /// <remarks>
         /// Gets an identified Policy
@@ -706,7 +706,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
         /// <remarks>
         /// Gets an identified PolicyCollection
@@ -721,7 +721,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyCollectionResponse> GetPolicyCollectionAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
         /// <remarks>
         /// Gets an identified PolicyCollection
@@ -770,7 +770,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;PolicyResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+        /// ListPolicyCollections: List PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
@@ -788,7 +788,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<List<PolicyCollectionResponse>> ListPolicyCollectionsAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+        /// ListPolicyCollections: List PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
@@ -838,7 +838,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfPolicyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+        /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections with pagination support.
@@ -855,7 +855,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+        /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
         /// <remarks>
         /// Gets all PolicyCollections with pagination support.
@@ -871,7 +871,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfPolicyCollectionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
         /// <remarks>
         /// Remove Policies and/or PolicyCollections from a PolicyCollection
@@ -886,7 +886,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyCollectionResponse> RemoveFromPolicyCollectionAsync(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
         /// <remarks>
         /// Remove Policies and/or PolicyCollections from a PolicyCollection
@@ -900,7 +900,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> RemoveFromPolicyCollectionWithHttpInfoAsync(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy
+        /// UpdatePolicy: Update Policy
         /// </summary>
         /// <remarks>
         /// Updates a Policy
@@ -915,7 +915,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyResponse> UpdatePolicyAsync(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy
+        /// UpdatePolicy: Update Policy
         /// </summary>
         /// <remarks>
         /// Updates a Policy
@@ -929,7 +929,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> UpdatePolicyWithHttpInfoAsync(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
         /// <remarks>
         /// Updates a PolicyCollection
@@ -944,7 +944,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<PolicyCollectionResponse> UpdatePolicyCollectionAsync(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
         /// <remarks>
         /// Updates a PolicyCollection
@@ -1075,7 +1075,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1090,7 +1090,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1182,7 +1182,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1198,7 +1198,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
+        /// AddToPolicyCollection: Add To PolicyCollection Add Policies and/or PolicyCollections to a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1293,7 +1293,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy Creates a Policy
+        /// CreatePolicy: Create Policy Creates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCreationRequest">The definition of the Policy</param>
@@ -1306,7 +1306,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy Creates a Policy
+        /// CreatePolicy: Create Policy Creates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCreationRequest">The definition of the Policy</param>
@@ -1385,7 +1385,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy Creates a Policy
+        /// CreatePolicy: Create Policy Creates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCreationRequest">The definition of the Policy</param>
@@ -1399,7 +1399,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicy: Create Policy Creates a Policy
+        /// CreatePolicy: Create Policy Creates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCreationRequest">The definition of the Policy</param>
@@ -1481,7 +1481,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCollectionCreationRequest">The definition of the PolicyCollection</param>
@@ -1494,7 +1494,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCollectionCreationRequest">The definition of the PolicyCollection</param>
@@ -1573,7 +1573,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCollectionCreationRequest">The definition of the PolicyCollection</param>
@@ -1587,7 +1587,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
+        /// CreatePolicyCollection: Create PolicyCollection Creates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyCollectionCreationRequest">The definition of the PolicyCollection</param>
@@ -1669,7 +1669,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy Deletes an identified Policy
+        /// DeletePolicy: Delete Policy Deletes an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -1682,7 +1682,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy Deletes an identified Policy
+        /// DeletePolicy: Delete Policy Deletes an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -1762,7 +1762,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy Deletes an identified Policy
+        /// DeletePolicy: Delete Policy Deletes an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -1776,7 +1776,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicy: Delete Policy Deletes an identified Policy
+        /// DeletePolicy: Delete Policy Deletes an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -1859,7 +1859,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1872,7 +1872,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1952,7 +1952,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -1966,7 +1966,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
+        /// DeletePolicyCollection: Delete PolicyCollection Deletes an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -2049,7 +2049,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
+        /// Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
@@ -2064,7 +2064,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
+        /// Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
@@ -2153,7 +2153,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
+        /// Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
@@ -2169,7 +2169,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
+        /// Evaluate: Run one or more evaluations Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user&#39;s policies (deduced from the provided OAuth token).
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
@@ -2495,7 +2495,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy Gets an identified Policy
+        /// GetPolicy: Get Policy Gets an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -2510,7 +2510,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy Gets an identified Policy
+        /// GetPolicy: Get Policy Gets an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -2595,7 +2595,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy Gets an identified Policy
+        /// GetPolicy: Get Policy Gets an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -2611,7 +2611,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicy: Get Policy Gets an identified Policy
+        /// GetPolicy: Get Policy Gets an identified Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -2699,7 +2699,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -2714,7 +2714,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -2799,7 +2799,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -2815,7 +2815,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
+        /// GetPolicyCollection: Get PolicyCollection Gets an identified PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -3137,7 +3137,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
+        /// ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3155,7 +3155,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
+        /// ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3252,7 +3252,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
+        /// ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3271,7 +3271,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
+        /// ListPolicyCollections: List PolicyCollections Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3593,7 +3593,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
+        /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3610,7 +3610,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
+        /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3702,7 +3702,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
+        /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3720,7 +3720,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
+        /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3815,7 +3815,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -3830,7 +3830,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -3922,7 +3922,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -3938,7 +3938,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
+        /// RemoveFromPolicyCollection: Remove From PolicyCollection Remove Policies and/or PolicyCollections from a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -4033,7 +4033,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy Updates a Policy
+        /// UpdatePolicy: Update Policy Updates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -4048,7 +4048,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy Updates a Policy
+        /// UpdatePolicy: Update Policy Updates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -4140,7 +4140,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy Updates a Policy
+        /// UpdatePolicy: Update Policy Updates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -4156,7 +4156,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicy: Update Policy Updates a Policy
+        /// UpdatePolicy: Update Policy Updates a Policy
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
@@ -4251,7 +4251,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -4266,7 +4266,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -4358,7 +4358,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
@@ -4374,7 +4374,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
+        /// UpdatePolicyCollection: Update PolicyCollection Updates a PolicyCollection
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>

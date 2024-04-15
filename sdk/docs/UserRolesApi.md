@@ -4,21 +4,21 @@ All URIs are relative to *https://fbn-prd.lusid.com/access*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**AddPolicyCollectionToUserRole**](UserRolesApi.md#addpolicycollectiontouserrole) | **POST** /api/userroles/{userid}/policycollections | [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role |
-| [**AddPolicyToUserRole**](UserRolesApi.md#addpolicytouserrole) | **POST** /api/userroles/{userid}/policies | [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role |
-| [**CreateUserRole**](UserRolesApi.md#createuserrole) | **POST** /api/userroles | [EXPERIMENTAL] CreateUserRole: Create a user-role |
-| [**DeleteUserRole**](UserRolesApi.md#deleteuserrole) | **DELETE** /api/userroles/{userid} | [EXPERIMENTAL] DeleteUserRole: Delete a user-role |
-| [**GetUserRole**](UserRolesApi.md#getuserrole) | **GET** /api/userroles/{userid} | [EXPERIMENTAL] GetUserRole: Get a user-role |
-| [**ListUserRoles**](UserRolesApi.md#listuserroles) | **GET** /api/userroles | [EXPERIMENTAL] ListUserRoles: List user-roles |
-| [**RemovePolicyCollectionFromUserRole**](UserRolesApi.md#removepolicycollectionfromuserrole) | **DELETE** /api/userroles/{userid}/policycollections/{policyCollectionScope}/{policyCollectionCode} | [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role |
-| [**RemovePolicyFromUserRole**](UserRolesApi.md#removepolicyfromuserrole) | **DELETE** /api/userroles/{userid}/policies/{policyScope}/{policyCode} | [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role |
-| [**UpdateUserRole**](UserRolesApi.md#updateuserrole) | **POST** /api/userroles/{userid}/update | [EXPERIMENTAL] UpdateUserRole: Update a user-role |
+| [**AddPolicyCollectionToUserRole**](UserRolesApi.md#addpolicycollectiontouserrole) | **POST** /api/userroles/{userid}/policycollections | AddPolicyCollectionToUserRole: Add a policy collection to a user-role |
+| [**AddPolicyToUserRole**](UserRolesApi.md#addpolicytouserrole) | **POST** /api/userroles/{userid}/policies | AddPolicyToUserRole: Add a policy to a user-role |
+| [**CreateUserRole**](UserRolesApi.md#createuserrole) | **POST** /api/userroles | CreateUserRole: Create a user-role |
+| [**DeleteUserRole**](UserRolesApi.md#deleteuserrole) | **DELETE** /api/userroles/{userid} | DeleteUserRole: Delete a user-role |
+| [**GetUserRole**](UserRolesApi.md#getuserrole) | **GET** /api/userroles/{userid} | GetUserRole: Get a user-role |
+| [**ListUserRoles**](UserRolesApi.md#listuserroles) | **GET** /api/userroles | ListUserRoles: List user-roles |
+| [**RemovePolicyCollectionFromUserRole**](UserRolesApi.md#removepolicycollectionfromuserrole) | **DELETE** /api/userroles/{userid}/policycollections/{policyCollectionScope}/{policyCollectionCode} | RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role |
+| [**RemovePolicyFromUserRole**](UserRolesApi.md#removepolicyfromuserrole) | **DELETE** /api/userroles/{userid}/policies/{policyScope}/{policyCode} | RemovePolicyFromUserRole: Remove a policy from a user-role |
+| [**UpdateUserRole**](UserRolesApi.md#updateuserrole) | **POST** /api/userroles/{userid}/update | UpdateUserRole: Update a user-role |
 
 <a id="addpolicycollectiontouserrole"></a>
 # **AddPolicyCollectionToUserRole**
 > UserRoleResponse AddPolicyCollectionToUserRole (string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest)
 
-[EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+AddPolicyCollectionToUserRole: Add a policy collection to a user-role
 
 Adds a policy collection to a user-role.
 
@@ -47,7 +47,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+                // AddPolicyCollectionToUserRole: Add a policy collection to a user-role
                 UserRoleResponse result = apiInstance.AddPolicyCollectionToUserRole(userid, addPolicyCollectionToRoleRequest);
                 Debug.WriteLine(result);
             }
@@ -68,7 +68,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+    // AddPolicyCollectionToUserRole: Add a policy collection to a user-role
     ApiResponse<UserRoleResponse> response = apiInstance.AddPolicyCollectionToUserRoleWithHttpInfo(userid, addPolicyCollectionToRoleRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -116,7 +116,7 @@ catch (ApiException e)
 # **AddPolicyToUserRole**
 > UserRoleResponse AddPolicyToUserRole (string userid, AddPolicyToRoleRequest addPolicyToRoleRequest)
 
-[EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+AddPolicyToUserRole: Add a policy to a user-role
 
 Adds a policy to a user-role.
 
@@ -145,7 +145,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+                // AddPolicyToUserRole: Add a policy to a user-role
                 UserRoleResponse result = apiInstance.AddPolicyToUserRole(userid, addPolicyToRoleRequest);
                 Debug.WriteLine(result);
             }
@@ -166,7 +166,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+    // AddPolicyToUserRole: Add a policy to a user-role
     ApiResponse<UserRoleResponse> response = apiInstance.AddPolicyToUserRoleWithHttpInfo(userid, addPolicyToRoleRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -214,7 +214,7 @@ catch (ApiException e)
 # **CreateUserRole**
 > UserRoleResponse CreateUserRole (UserRoleCreationRequest userRoleCreationRequest)
 
-[EXPERIMENTAL] CreateUserRole: Create a user-role
+CreateUserRole: Create a user-role
 
 Creates a new user-role.
 
@@ -242,7 +242,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] CreateUserRole: Create a user-role
+                // CreateUserRole: Create a user-role
                 UserRoleResponse result = apiInstance.CreateUserRole(userRoleCreationRequest);
                 Debug.WriteLine(result);
             }
@@ -263,7 +263,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] CreateUserRole: Create a user-role
+    // CreateUserRole: Create a user-role
     ApiResponse<UserRoleResponse> response = apiInstance.CreateUserRoleWithHttpInfo(userRoleCreationRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -310,7 +310,7 @@ catch (ApiException e)
 # **DeleteUserRole**
 > void DeleteUserRole (string userid)
 
-[EXPERIMENTAL] DeleteUserRole: Delete a user-role
+DeleteUserRole: Delete a user-role
 
 Deletes an identified user-role.
 
@@ -338,7 +338,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+                // DeleteUserRole: Delete a user-role
                 apiInstance.DeleteUserRole(userid);
             }
             catch (ApiException  e)
@@ -358,7 +358,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+    // DeleteUserRole: Delete a user-role
     apiInstance.DeleteUserRoleWithHttpInfo(userid);
 }
 catch (ApiException e)
@@ -402,7 +402,7 @@ void (empty response body)
 # **GetUserRole**
 > UserRoleResponse GetUserRole (string userid)
 
-[EXPERIMENTAL] GetUserRole: Get a user-role
+GetUserRole: Get a user-role
 
 Get an identified user-role.
 
@@ -430,7 +430,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GetUserRole: Get a user-role
+                // GetUserRole: Get a user-role
                 UserRoleResponse result = apiInstance.GetUserRole(userid);
                 Debug.WriteLine(result);
             }
@@ -451,7 +451,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetUserRole: Get a user-role
+    // GetUserRole: Get a user-role
     ApiResponse<UserRoleResponse> response = apiInstance.GetUserRoleWithHttpInfo(userid);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -498,7 +498,7 @@ catch (ApiException e)
 # **ListUserRoles**
 > ResourceListOfUserRoleResponse ListUserRoles (string? filter = null, string? sortBy = null, int? limit = null, string? page = null)
 
-[EXPERIMENTAL] ListUserRoles: List user-roles
+ListUserRoles: List user-roles
 
 Lists all user-roles and pages.
 
@@ -529,7 +529,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] ListUserRoles: List user-roles
+                // ListUserRoles: List user-roles
                 ResourceListOfUserRoleResponse result = apiInstance.ListUserRoles(filter, sortBy, limit, page);
                 Debug.WriteLine(result);
             }
@@ -550,7 +550,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListUserRoles: List user-roles
+    // ListUserRoles: List user-roles
     ApiResponse<ResourceListOfUserRoleResponse> response = apiInstance.ListUserRolesWithHttpInfo(filter, sortBy, limit, page);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -600,7 +600,7 @@ catch (ApiException e)
 # **RemovePolicyCollectionFromUserRole**
 > void RemovePolicyCollectionFromUserRole (string userid, string policyCollectionScope, string policyCollectionCode)
 
-[EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
 
 Removes a policy collection from a user-role.
 
@@ -630,7 +630,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+                // RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
                 apiInstance.RemovePolicyCollectionFromUserRole(userid, policyCollectionScope, policyCollectionCode);
             }
             catch (ApiException  e)
@@ -650,7 +650,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+    // RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
     apiInstance.RemovePolicyCollectionFromUserRoleWithHttpInfo(userid, policyCollectionScope, policyCollectionCode);
 }
 catch (ApiException e)
@@ -696,7 +696,7 @@ void (empty response body)
 # **RemovePolicyFromUserRole**
 > void RemovePolicyFromUserRole (string userid, string policyScope, string policyCode)
 
-[EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+RemovePolicyFromUserRole: Remove a policy from a user-role
 
 Removes a policy from a user-role.
 
@@ -726,7 +726,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+                // RemovePolicyFromUserRole: Remove a policy from a user-role
                 apiInstance.RemovePolicyFromUserRole(userid, policyScope, policyCode);
             }
             catch (ApiException  e)
@@ -746,7 +746,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+    // RemovePolicyFromUserRole: Remove a policy from a user-role
     apiInstance.RemovePolicyFromUserRoleWithHttpInfo(userid, policyScope, policyCode);
 }
 catch (ApiException e)
@@ -792,7 +792,7 @@ void (empty response body)
 # **UpdateUserRole**
 > UserRoleResponse UpdateUserRole (string userid, UserRoleUpdateRequest userRoleUpdateRequest)
 
-[EXPERIMENTAL] UpdateUserRole: Update a user-role
+UpdateUserRole: Update a user-role
 
 Updates an identified user-role.
 
@@ -821,7 +821,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] UpdateUserRole: Update a user-role
+                // UpdateUserRole: Update a user-role
                 UserRoleResponse result = apiInstance.UpdateUserRole(userid, userRoleUpdateRequest);
                 Debug.WriteLine(result);
             }
@@ -842,7 +842,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateUserRole: Update a user-role
+    // UpdateUserRole: Update a user-role
     ApiResponse<UserRoleResponse> response = apiInstance.UpdateUserRoleWithHttpInfo(userid, userRoleUpdateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

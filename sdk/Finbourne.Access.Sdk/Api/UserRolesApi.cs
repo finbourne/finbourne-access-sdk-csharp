@@ -25,7 +25,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy collection to a user-role.
@@ -38,7 +38,7 @@ namespace Finbourne.Access.Sdk.Api
         UserRoleResponse AddPolicyCollectionToUserRole(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy collection to a user-role.
@@ -50,7 +50,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of UserRoleResponse</returns>
         ApiResponse<UserRoleResponse> AddPolicyCollectionToUserRoleWithHttpInfo(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+        /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy to a user-role.
@@ -63,7 +63,7 @@ namespace Finbourne.Access.Sdk.Api
         UserRoleResponse AddPolicyToUserRole(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+        /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy to a user-role.
@@ -75,7 +75,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of UserRoleResponse</returns>
         ApiResponse<UserRoleResponse> AddPolicyToUserRoleWithHttpInfo(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role
+        /// CreateUserRole: Create a user-role
         /// </summary>
         /// <remarks>
         /// Creates a new user-role.
@@ -87,7 +87,7 @@ namespace Finbourne.Access.Sdk.Api
         UserRoleResponse CreateUserRole(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role
+        /// CreateUserRole: Create a user-role
         /// </summary>
         /// <remarks>
         /// Creates a new user-role.
@@ -98,7 +98,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of UserRoleResponse</returns>
         ApiResponse<UserRoleResponse> CreateUserRoleWithHttpInfo(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+        /// DeleteUserRole: Delete a user-role
         /// </summary>
         /// <remarks>
         /// Deletes an identified user-role.
@@ -110,7 +110,7 @@ namespace Finbourne.Access.Sdk.Api
         void DeleteUserRole(string userid, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+        /// DeleteUserRole: Delete a user-role
         /// </summary>
         /// <remarks>
         /// Deletes an identified user-role.
@@ -121,7 +121,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserRoleWithHttpInfo(string userid, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role
+        /// GetUserRole: Get a user-role
         /// </summary>
         /// <remarks>
         /// Get an identified user-role.
@@ -133,7 +133,7 @@ namespace Finbourne.Access.Sdk.Api
         UserRoleResponse GetUserRole(string userid, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role
+        /// GetUserRole: Get a user-role
         /// </summary>
         /// <remarks>
         /// Get an identified user-role.
@@ -144,7 +144,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of UserRoleResponse</returns>
         ApiResponse<UserRoleResponse> GetUserRoleWithHttpInfo(string userid, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles
+        /// ListUserRoles: List user-roles
         /// </summary>
         /// <remarks>
         /// Lists all user-roles and pages.
@@ -159,7 +159,7 @@ namespace Finbourne.Access.Sdk.Api
         ResourceListOfUserRoleResponse ListUserRoles(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles
+        /// ListUserRoles: List user-roles
         /// </summary>
         /// <remarks>
         /// Lists all user-roles and pages.
@@ -173,7 +173,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfUserRoleResponse</returns>
         ApiResponse<ResourceListOfUserRoleResponse> ListUserRolesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a user-role.
@@ -187,7 +187,7 @@ namespace Finbourne.Access.Sdk.Api
         void RemovePolicyCollectionFromUserRole(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a user-role.
@@ -200,7 +200,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemovePolicyCollectionFromUserRoleWithHttpInfo(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy from a user-role.
@@ -214,7 +214,7 @@ namespace Finbourne.Access.Sdk.Api
         void RemovePolicyFromUserRole(string userid, string policyScope, string policyCode, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy from a user-role.
@@ -227,7 +227,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RemovePolicyFromUserRoleWithHttpInfo(string userid, string policyScope, string policyCode, int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role
+        /// UpdateUserRole: Update a user-role
         /// </summary>
         /// <remarks>
         /// Updates an identified user-role.
@@ -240,7 +240,7 @@ namespace Finbourne.Access.Sdk.Api
         UserRoleResponse UpdateUserRole(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role
+        /// UpdateUserRole: Update a user-role
         /// </summary>
         /// <remarks>
         /// Updates an identified user-role.
@@ -261,7 +261,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy collection to a user-role.
@@ -275,7 +275,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<UserRoleResponse> AddPolicyCollectionToUserRoleAsync(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy collection to a user-role.
@@ -288,7 +288,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> AddPolicyCollectionToUserRoleWithHttpInfoAsync(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+        /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy to a user-role.
@@ -302,7 +302,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<UserRoleResponse> AddPolicyToUserRoleAsync(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role
+        /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
         /// <remarks>
         /// Adds a policy to a user-role.
@@ -315,7 +315,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> AddPolicyToUserRoleWithHttpInfoAsync(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role
+        /// CreateUserRole: Create a user-role
         /// </summary>
         /// <remarks>
         /// Creates a new user-role.
@@ -328,7 +328,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<UserRoleResponse> CreateUserRoleAsync(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role
+        /// CreateUserRole: Create a user-role
         /// </summary>
         /// <remarks>
         /// Creates a new user-role.
@@ -340,7 +340,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> CreateUserRoleWithHttpInfoAsync(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+        /// DeleteUserRole: Delete a user-role
         /// </summary>
         /// <remarks>
         /// Deletes an identified user-role.
@@ -353,7 +353,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task DeleteUserRoleAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role
+        /// DeleteUserRole: Delete a user-role
         /// </summary>
         /// <remarks>
         /// Deletes an identified user-role.
@@ -365,7 +365,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role
+        /// GetUserRole: Get a user-role
         /// </summary>
         /// <remarks>
         /// Get an identified user-role.
@@ -378,7 +378,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<UserRoleResponse> GetUserRoleAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role
+        /// GetUserRole: Get a user-role
         /// </summary>
         /// <remarks>
         /// Get an identified user-role.
@@ -390,7 +390,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> GetUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles
+        /// ListUserRoles: List user-roles
         /// </summary>
         /// <remarks>
         /// Lists all user-roles and pages.
@@ -406,7 +406,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfUserRoleResponse> ListUserRolesAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles
+        /// ListUserRoles: List user-roles
         /// </summary>
         /// <remarks>
         /// Lists all user-roles and pages.
@@ -421,7 +421,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfUserRoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceListOfUserRoleResponse>> ListUserRolesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a user-role.
@@ -436,7 +436,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task RemovePolicyCollectionFromUserRoleAsync(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a user-role.
@@ -450,7 +450,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemovePolicyCollectionFromUserRoleWithHttpInfoAsync(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy from a user-role.
@@ -465,7 +465,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task RemovePolicyFromUserRoleAsync(string userid, string policyScope, string policyCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
         /// <remarks>
         /// Removes a policy from a user-role.
@@ -479,7 +479,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RemovePolicyFromUserRoleWithHttpInfoAsync(string userid, string policyScope, string policyCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role
+        /// UpdateUserRole: Update a user-role
         /// </summary>
         /// <remarks>
         /// Updates an identified user-role.
@@ -493,7 +493,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<UserRoleResponse> UpdateUserRoleAsync(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role
+        /// UpdateUserRole: Update a user-role
         /// </summary>
         /// <remarks>
         /// Updates an identified user-role.
@@ -623,7 +623,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -637,7 +637,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -724,7 +724,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -739,7 +739,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
+        /// AddPolicyCollectionToUserRole: Add a policy collection to a user-role Adds a policy collection to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -829,7 +829,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
+        /// AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -843,7 +843,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
+        /// AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -930,7 +930,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
+        /// AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -945,7 +945,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
+        /// AddPolicyToUserRole: Add a policy to a user-role Adds a policy to a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -1035,7 +1035,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role Creates a new user-role.
+        /// CreateUserRole: Create a user-role Creates a new user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userRoleCreationRequest">Definition of the user-role to create.</param>
@@ -1048,7 +1048,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role Creates a new user-role.
+        /// CreateUserRole: Create a user-role Creates a new user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userRoleCreationRequest">Definition of the user-role to create.</param>
@@ -1127,7 +1127,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role Creates a new user-role.
+        /// CreateUserRole: Create a user-role Creates a new user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userRoleCreationRequest">Definition of the user-role to create.</param>
@@ -1141,7 +1141,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateUserRole: Create a user-role Creates a new user-role.
+        /// CreateUserRole: Create a user-role Creates a new user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userRoleCreationRequest">Definition of the user-role to create.</param>
@@ -1223,7 +1223,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role Deletes an identified user-role.
+        /// DeleteUserRole: Delete a user-role Deletes an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to delete.</param>
@@ -1235,7 +1235,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role Deletes an identified user-role.
+        /// DeleteUserRole: Delete a user-role Deletes an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to delete.</param>
@@ -1310,7 +1310,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role Deletes an identified user-role.
+        /// DeleteUserRole: Delete a user-role Deletes an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to delete.</param>
@@ -1323,7 +1323,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteUserRole: Delete a user-role Deletes an identified user-role.
+        /// DeleteUserRole: Delete a user-role Deletes an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to delete.</param>
@@ -1401,7 +1401,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role Get an identified user-role.
+        /// GetUserRole: Get a user-role Get an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to get.</param>
@@ -1414,7 +1414,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role Get an identified user-role.
+        /// GetUserRole: Get a user-role Get an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to get.</param>
@@ -1489,7 +1489,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role Get an identified user-role.
+        /// GetUserRole: Get a user-role Get an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to get.</param>
@@ -1503,7 +1503,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetUserRole: Get a user-role Get an identified user-role.
+        /// GetUserRole: Get a user-role Get an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to get.</param>
@@ -1581,7 +1581,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles Lists all user-roles and pages.
+        /// ListUserRoles: List user-roles Lists all user-roles and pages.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -1597,7 +1597,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles Lists all user-roles and pages.
+        /// ListUserRoles: List user-roles Lists all user-roles and pages.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -1684,7 +1684,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles Lists all user-roles and pages.
+        /// ListUserRoles: List user-roles Lists all user-roles and pages.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -1701,7 +1701,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListUserRoles: List user-roles Lists all user-roles and pages.
+        /// ListUserRoles: List user-roles Lists all user-roles and pages.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -1791,7 +1791,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -1805,7 +1805,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -1896,7 +1896,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -1911,7 +1911,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
+        /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role Removes a policy collection from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -2005,7 +2005,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -2019,7 +2019,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -2110,7 +2110,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -2125,7 +2125,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
+        /// RemovePolicyFromUserRole: Remove a policy from a user-role Removes a policy from a user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the User Role to get</param>
@@ -2219,7 +2219,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role Updates an identified user-role.
+        /// UpdateUserRole: Update a user-role Updates an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to be updated.</param>
@@ -2233,7 +2233,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role Updates an identified user-role.
+        /// UpdateUserRole: Update a user-role Updates an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to be updated.</param>
@@ -2320,7 +2320,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role Updates an identified user-role.
+        /// UpdateUserRole: Update a user-role Updates an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to be updated.</param>
@@ -2335,7 +2335,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateUserRole: Update a user-role Updates an identified user-role.
+        /// UpdateUserRole: Update a user-role Updates an identified user-role.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userid">Id of the user-role to be updated.</param>

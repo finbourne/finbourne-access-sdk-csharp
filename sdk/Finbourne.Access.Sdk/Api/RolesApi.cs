@@ -25,7 +25,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role
         /// </summary>
         /// <remarks>
         /// Assigns policy collections to a role
@@ -39,7 +39,7 @@ namespace Finbourne.Access.Sdk.Api
         RoleResponse AddPolicyCollectionToRole(string scope, string code, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role
         /// </summary>
         /// <remarks>
         /// Assigns policy collections to a role
@@ -52,7 +52,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> AddPolicyCollectionToRoleWithHttpInfo(string scope, string code, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a Role
@@ -64,7 +64,7 @@ namespace Finbourne.Access.Sdk.Api
         RoleResponse CreateRole(RoleCreationRequest roleCreationRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a Role
@@ -75,7 +75,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> CreateRoleWithHttpInfo(RoleCreationRequest roleCreationRequest, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Deletes an identified Role
@@ -88,7 +88,7 @@ namespace Finbourne.Access.Sdk.Api
         void DeleteRole(string code, string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Deletes an identified Role
@@ -100,7 +100,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRoleWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Gets an identified Role
@@ -114,7 +114,7 @@ namespace Finbourne.Access.Sdk.Api
         RoleResponse GetRole(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Gets an identified Role
@@ -127,7 +127,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> GetRoleWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// Gets all Roles in a scope
@@ -144,7 +144,7 @@ namespace Finbourne.Access.Sdk.Api
         List<RoleResponse> ListRoles(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// Gets all Roles in a scope
@@ -160,7 +160,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
         ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a role
@@ -175,7 +175,7 @@ namespace Finbourne.Access.Sdk.Api
         RoleResponse RemovePolicyCollectionFromRole(string scope, string code, string policycollectionscope, string policycollectioncode, int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a role
@@ -189,7 +189,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of RoleResponse</returns>
         ApiResponse<RoleResponse> RemovePolicyCollectionFromRoleWithHttpInfo(string scope, string code, string policycollectionscope, string policycollectioncode, int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Updates a Role
@@ -207,7 +207,7 @@ namespace Finbourne.Access.Sdk.Api
         RoleResponse UpdateRole(string code, RoleUpdateRequest roleUpdateRequest, string? scope = default(string?), string? beforeScope = default(string?), string? beforeCode = default(string?), string? afterScope = default(string?), string? afterCode = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Updates a Role
@@ -233,7 +233,7 @@ namespace Finbourne.Access.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role
         /// </summary>
         /// <remarks>
         /// Assigns policy collections to a role
@@ -248,7 +248,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> AddPolicyCollectionToRoleAsync(string scope, string code, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role
         /// </summary>
         /// <remarks>
         /// Assigns policy collections to a role
@@ -262,7 +262,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> AddPolicyCollectionToRoleWithHttpInfoAsync(string scope, string code, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a Role
@@ -275,7 +275,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> CreateRoleAsync(RoleCreationRequest roleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role
+        /// CreateRole: Create Role
         /// </summary>
         /// <remarks>
         /// Creates a Role
@@ -287,7 +287,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> CreateRoleWithHttpInfoAsync(RoleCreationRequest roleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Deletes an identified Role
@@ -301,7 +301,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task DeleteRoleAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role
+        /// DeleteRole: Delete Role
         /// </summary>
         /// <remarks>
         /// Deletes an identified Role
@@ -314,7 +314,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Gets an identified Role
@@ -329,7 +329,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role
+        /// GetRole: Get Role
         /// </summary>
         /// <remarks>
         /// Gets an identified Role
@@ -343,7 +343,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// Gets all Roles in a scope
@@ -361,7 +361,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles
+        /// ListRoles: List Roles
         /// </summary>
         /// <remarks>
         /// Gets all Roles in a scope
@@ -378,7 +378,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a role
@@ -394,7 +394,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> RemovePolicyCollectionFromRoleAsync(string scope, string code, string policycollectionscope, string policycollectioncode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
         /// <remarks>
         /// Removes a policy collection from a role
@@ -409,7 +409,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoleResponse>> RemovePolicyCollectionFromRoleWithHttpInfoAsync(string scope, string code, string policycollectionscope, string policycollectioncode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Updates a Role
@@ -428,7 +428,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<RoleResponse> UpdateRoleAsync(string code, RoleUpdateRequest roleUpdateRequest, string? scope = default(string?), string? beforeScope = default(string?), string? beforeCode = default(string?), string? afterScope = default(string?), string? afterCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role
+        /// UpdateRole: Update Role
         /// </summary>
         /// <remarks>
         /// Updates a Role
@@ -563,7 +563,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -578,7 +578,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -673,7 +673,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -689,7 +689,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
+        /// AddPolicyCollectionToRole: Add policy collections to a role Assigns policy collections to a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -787,7 +787,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a Role
+        /// CreateRole: Create Role Creates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleCreationRequest">The definition of the Role</param>
@@ -800,7 +800,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a Role
+        /// CreateRole: Create Role Creates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleCreationRequest">The definition of the Role</param>
@@ -879,7 +879,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a Role
+        /// CreateRole: Create Role Creates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleCreationRequest">The definition of the Role</param>
@@ -893,7 +893,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] CreateRole: Create Role Creates a Role
+        /// CreateRole: Create Role Creates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleCreationRequest">The definition of the Role</param>
@@ -975,7 +975,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Deletes an identified Role
+        /// DeleteRole: Delete Role Deletes an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -988,7 +988,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Deletes an identified Role
+        /// DeleteRole: Delete Role Deletes an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1068,7 +1068,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Deletes an identified Role
+        /// DeleteRole: Delete Role Deletes an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1082,7 +1082,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] DeleteRole: Delete Role Deletes an identified Role
+        /// DeleteRole: Delete Role Deletes an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1165,7 +1165,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Gets an identified Role
+        /// GetRole: Get Role Gets an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1180,7 +1180,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Gets an identified Role
+        /// GetRole: Get Role Gets an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1265,7 +1265,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Gets an identified Role
+        /// GetRole: Get Role Gets an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1281,7 +1281,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] GetRole: Get Role Gets an identified Role
+        /// GetRole: Get Role Gets an identified Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1369,7 +1369,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles Gets all Roles in a scope
+        /// ListRoles: List Roles Gets all Roles in a scope
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
@@ -1387,7 +1387,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles Gets all Roles in a scope
+        /// ListRoles: List Roles Gets all Roles in a scope
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
@@ -1484,7 +1484,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles Gets all Roles in a scope
+        /// ListRoles: List Roles Gets all Roles in a scope
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
@@ -1503,7 +1503,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListRoles: List Roles Gets all Roles in a scope
+        /// ListRoles: List Roles Gets all Roles in a scope
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
@@ -1603,7 +1603,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -1619,7 +1619,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -1718,7 +1718,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -1735,7 +1735,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
+        /// RemovePolicyCollectionFromRole: Remove policy collection from role Removes a policy collection from a role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the Role</param>
@@ -1837,7 +1837,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Updates a Role
+        /// UpdateRole: Update Role Updates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1856,7 +1856,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Updates a Role
+        /// UpdateRole: Update Role Updates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1968,7 +1968,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Updates a Role
+        /// UpdateRole: Update Role Updates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
@@ -1988,7 +1988,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] UpdateRole: Update Role Updates a Role
+        /// UpdateRole: Update Role Updates a Role
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>

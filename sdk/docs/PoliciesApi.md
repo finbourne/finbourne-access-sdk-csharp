@@ -4,28 +4,28 @@ All URIs are relative to *https://fbn-prd.lusid.com/access*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**AddToPolicyCollection**](PoliciesApi.md#addtopolicycollection) | **POST** /api/policycollections/{code}/add | [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection |
-| [**CreatePolicy**](PoliciesApi.md#createpolicy) | **POST** /api/policies | [EARLY ACCESS] CreatePolicy: Create Policy |
-| [**CreatePolicyCollection**](PoliciesApi.md#createpolicycollection) | **POST** /api/policycollections | [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection |
-| [**DeletePolicy**](PoliciesApi.md#deletepolicy) | **DELETE** /api/policies/{code} | [EARLY ACCESS] DeletePolicy: Delete Policy |
-| [**DeletePolicyCollection**](PoliciesApi.md#deletepolicycollection) | **DELETE** /api/policycollections/{code} | [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection |
-| [**Evaluate**](PoliciesApi.md#evaluate) | **POST** /api/me | [EARLY ACCESS] Evaluate: Run one or more evaluations |
+| [**AddToPolicyCollection**](PoliciesApi.md#addtopolicycollection) | **POST** /api/policycollections/{code}/add | AddToPolicyCollection: Add To PolicyCollection |
+| [**CreatePolicy**](PoliciesApi.md#createpolicy) | **POST** /api/policies | CreatePolicy: Create Policy |
+| [**CreatePolicyCollection**](PoliciesApi.md#createpolicycollection) | **POST** /api/policycollections | CreatePolicyCollection: Create PolicyCollection |
+| [**DeletePolicy**](PoliciesApi.md#deletepolicy) | **DELETE** /api/policies/{code} | DeletePolicy: Delete Policy |
+| [**DeletePolicyCollection**](PoliciesApi.md#deletepolicycollection) | **DELETE** /api/policycollections/{code} | DeletePolicyCollection: Delete PolicyCollection |
+| [**Evaluate**](PoliciesApi.md#evaluate) | **POST** /api/me | Evaluate: Run one or more evaluations |
 | [**GetOwnPolicies**](PoliciesApi.md#getownpolicies) | **GET** /api/me | GetOwnPolicies: Get policies of requesting user |
-| [**GetPolicy**](PoliciesApi.md#getpolicy) | **GET** /api/policies/{code} | [EARLY ACCESS] GetPolicy: Get Policy |
-| [**GetPolicyCollection**](PoliciesApi.md#getpolicycollection) | **GET** /api/policycollections/{code} | [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection |
+| [**GetPolicy**](PoliciesApi.md#getpolicy) | **GET** /api/policies/{code} | GetPolicy: Get Policy |
+| [**GetPolicyCollection**](PoliciesApi.md#getpolicycollection) | **GET** /api/policycollections/{code} | GetPolicyCollection: Get PolicyCollection |
 | [**ListPolicies**](PoliciesApi.md#listpolicies) | **GET** /api/policies | [EARLY ACCESS] ListPolicies: List Policies |
-| [**ListPolicyCollections**](PoliciesApi.md#listpolicycollections) | **GET** /api/policycollections | [EARLY ACCESS] ListPolicyCollections: List PolicyCollections |
+| [**ListPolicyCollections**](PoliciesApi.md#listpolicycollections) | **GET** /api/policycollections | ListPolicyCollections: List PolicyCollections |
 | [**PagePolicies**](PoliciesApi.md#pagepolicies) | **GET** /api/policies/page | [EARLY ACCESS] PagePolicies: Page Policies |
-| [**PagePolicyCollections**](PoliciesApi.md#pagepolicycollections) | **GET** /api/policycollections/page | [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections |
-| [**RemoveFromPolicyCollection**](PoliciesApi.md#removefrompolicycollection) | **POST** /api/policycollections/{code}/remove | [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection |
-| [**UpdatePolicy**](PoliciesApi.md#updatepolicy) | **PUT** /api/policies/{code} | [EARLY ACCESS] UpdatePolicy: Update Policy |
-| [**UpdatePolicyCollection**](PoliciesApi.md#updatepolicycollection) | **PUT** /api/policycollections/{code} | [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection |
+| [**PagePolicyCollections**](PoliciesApi.md#pagepolicycollections) | **GET** /api/policycollections/page | PagePolicyCollections: Page PolicyCollections |
+| [**RemoveFromPolicyCollection**](PoliciesApi.md#removefrompolicycollection) | **POST** /api/policycollections/{code}/remove | RemoveFromPolicyCollection: Remove From PolicyCollection |
+| [**UpdatePolicy**](PoliciesApi.md#updatepolicy) | **PUT** /api/policies/{code} | UpdatePolicy: Update Policy |
+| [**UpdatePolicyCollection**](PoliciesApi.md#updatepolicycollection) | **PUT** /api/policycollections/{code} | UpdatePolicyCollection: Update PolicyCollection |
 
 <a id="addtopolicycollection"></a>
 # **AddToPolicyCollection**
 > PolicyCollectionResponse AddToPolicyCollection (string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = null)
 
-[EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+AddToPolicyCollection: Add To PolicyCollection
 
 Add Policies and/or PolicyCollections to a PolicyCollection
 
@@ -55,7 +55,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+                // AddToPolicyCollection: Add To PolicyCollection
                 PolicyCollectionResponse result = apiInstance.AddToPolicyCollection(code, addToPolicyCollectionRequest, scope);
                 Debug.WriteLine(result);
             }
@@ -76,7 +76,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] AddToPolicyCollection: Add To PolicyCollection
+    // AddToPolicyCollection: Add To PolicyCollection
     ApiResponse<PolicyCollectionResponse> response = apiInstance.AddToPolicyCollectionWithHttpInfo(code, addToPolicyCollectionRequest, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -125,7 +125,7 @@ catch (ApiException e)
 # **CreatePolicy**
 > PolicyResponse CreatePolicy (PolicyCreationRequest policyCreationRequest)
 
-[EARLY ACCESS] CreatePolicy: Create Policy
+CreatePolicy: Create Policy
 
 Creates a Policy
 
@@ -153,7 +153,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] CreatePolicy: Create Policy
+                // CreatePolicy: Create Policy
                 PolicyResponse result = apiInstance.CreatePolicy(policyCreationRequest);
                 Debug.WriteLine(result);
             }
@@ -174,7 +174,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] CreatePolicy: Create Policy
+    // CreatePolicy: Create Policy
     ApiResponse<PolicyResponse> response = apiInstance.CreatePolicyWithHttpInfo(policyCreationRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -221,7 +221,7 @@ catch (ApiException e)
 # **CreatePolicyCollection**
 > PolicyCollectionResponse CreatePolicyCollection (PolicyCollectionCreationRequest policyCollectionCreationRequest)
 
-[EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+CreatePolicyCollection: Create PolicyCollection
 
 Creates a PolicyCollection
 
@@ -249,7 +249,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+                // CreatePolicyCollection: Create PolicyCollection
                 PolicyCollectionResponse result = apiInstance.CreatePolicyCollection(policyCollectionCreationRequest);
                 Debug.WriteLine(result);
             }
@@ -270,7 +270,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] CreatePolicyCollection: Create PolicyCollection
+    // CreatePolicyCollection: Create PolicyCollection
     ApiResponse<PolicyCollectionResponse> response = apiInstance.CreatePolicyCollectionWithHttpInfo(policyCollectionCreationRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -317,7 +317,7 @@ catch (ApiException e)
 # **DeletePolicy**
 > void DeletePolicy (string code, string? scope = null)
 
-[EARLY ACCESS] DeletePolicy: Delete Policy
+DeletePolicy: Delete Policy
 
 Deletes an identified Policy
 
@@ -346,7 +346,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] DeletePolicy: Delete Policy
+                // DeletePolicy: Delete Policy
                 apiInstance.DeletePolicy(code, scope);
             }
             catch (ApiException  e)
@@ -366,7 +366,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] DeletePolicy: Delete Policy
+    // DeletePolicy: Delete Policy
     apiInstance.DeletePolicyWithHttpInfo(code, scope);
 }
 catch (ApiException e)
@@ -411,7 +411,7 @@ void (empty response body)
 # **DeletePolicyCollection**
 > void DeletePolicyCollection (string code, string? scope = null)
 
-[EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+DeletePolicyCollection: Delete PolicyCollection
 
 Deletes an identified PolicyCollection
 
@@ -440,7 +440,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+                // DeletePolicyCollection: Delete PolicyCollection
                 apiInstance.DeletePolicyCollection(code, scope);
             }
             catch (ApiException  e)
@@ -460,7 +460,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] DeletePolicyCollection: Delete PolicyCollection
+    // DeletePolicyCollection: Delete PolicyCollection
     apiInstance.DeletePolicyCollectionWithHttpInfo(code, scope);
 }
 catch (ApiException e)
@@ -505,7 +505,7 @@ void (empty response body)
 # **Evaluate**
 > Dictionary&lt;string, EvaluationResponse&gt; Evaluate (Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = null, DateTimeOffset? asAt = null)
 
-[EARLY ACCESS] Evaluate: Run one or more evaluations
+Evaluate: Run one or more evaluations
 
 Given a dictionary of evaluation requests (keyed by any arbitrary correlation identifier), each will be evaluated according to the current user's policies (deduced from the provided OAuth token).
 
@@ -535,7 +535,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] Evaluate: Run one or more evaluations
+                // Evaluate: Run one or more evaluations
                 Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, asAt);
                 Debug.WriteLine(result);
             }
@@ -556,7 +556,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] Evaluate: Run one or more evaluations
+    // Evaluate: Run one or more evaluations
     ApiResponse<Dictionary<string, EvaluationResponse>> response = apiInstance.EvaluateWithHttpInfo(requestBody, applications, asAt);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -711,7 +711,7 @@ catch (ApiException e)
 # **GetPolicy**
 > PolicyResponse GetPolicy (string code, DateTimeOffset? asAt = null, string? scope = null)
 
-[EARLY ACCESS] GetPolicy: Get Policy
+GetPolicy: Get Policy
 
 Gets an identified Policy
 
@@ -741,7 +741,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetPolicy: Get Policy
+                // GetPolicy: Get Policy
                 PolicyResponse result = apiInstance.GetPolicy(code, asAt, scope);
                 Debug.WriteLine(result);
             }
@@ -762,7 +762,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetPolicy: Get Policy
+    // GetPolicy: Get Policy
     ApiResponse<PolicyResponse> response = apiInstance.GetPolicyWithHttpInfo(code, asAt, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -811,7 +811,7 @@ catch (ApiException e)
 # **GetPolicyCollection**
 > PolicyCollectionResponse GetPolicyCollection (string code, DateTimeOffset? asAt = null, string? scope = null)
 
-[EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+GetPolicyCollection: Get PolicyCollection
 
 Gets an identified PolicyCollection
 
@@ -841,7 +841,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+                // GetPolicyCollection: Get PolicyCollection
                 PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, asAt, scope);
                 Debug.WriteLine(result);
             }
@@ -862,7 +862,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] GetPolicyCollection: Get PolicyCollection
+    // GetPolicyCollection: Get PolicyCollection
     ApiResponse<PolicyCollectionResponse> response = apiInstance.GetPolicyCollectionWithHttpInfo(code, asAt, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1017,7 +1017,7 @@ catch (ApiException e)
 # **ListPolicyCollections**
 > List&lt;PolicyCollectionResponse&gt; ListPolicyCollections (string? scope = null, DateTimeOffset? asAt = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+ListPolicyCollections: List PolicyCollections
 
 Gets all PolicyCollections in a scope. For pagination support, use PagePolicyCollections
 
@@ -1050,7 +1050,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+                // ListPolicyCollections: List PolicyCollections
                 List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, asAt, sortBy, start, limit, filter);
                 Debug.WriteLine(result);
             }
@@ -1071,7 +1071,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] ListPolicyCollections: List PolicyCollections
+    // ListPolicyCollections: List PolicyCollections
     ApiResponse<List<PolicyCollectionResponse>> response = apiInstance.ListPolicyCollectionsWithHttpInfo(scope, asAt, sortBy, start, limit, filter);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1227,7 +1227,7 @@ catch (ApiException e)
 # **PagePolicyCollections**
 > ResourceListOfPolicyCollectionResponse PagePolicyCollections (DateTimeOffset? asAt = null, string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
 
-[EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+PagePolicyCollections: Page PolicyCollections
 
 Gets all PolicyCollections with pagination support.
 
@@ -1259,7 +1259,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+                // PagePolicyCollections: Page PolicyCollections
                 ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(asAt, sortBy, limit, filter, page);
                 Debug.WriteLine(result);
             }
@@ -1280,7 +1280,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] PagePolicyCollections: Page PolicyCollections
+    // PagePolicyCollections: Page PolicyCollections
     ApiResponse<ResourceListOfPolicyCollectionResponse> response = apiInstance.PagePolicyCollectionsWithHttpInfo(asAt, sortBy, limit, filter, page);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1331,7 +1331,7 @@ catch (ApiException e)
 # **RemoveFromPolicyCollection**
 > PolicyCollectionResponse RemoveFromPolicyCollection (string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = null)
 
-[EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+RemoveFromPolicyCollection: Remove From PolicyCollection
 
 Remove Policies and/or PolicyCollections from a PolicyCollection
 
@@ -1361,7 +1361,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+                // RemoveFromPolicyCollection: Remove From PolicyCollection
                 PolicyCollectionResponse result = apiInstance.RemoveFromPolicyCollection(code, removeFromPolicyCollectionRequest, scope);
                 Debug.WriteLine(result);
             }
@@ -1382,7 +1382,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] RemoveFromPolicyCollection: Remove From PolicyCollection
+    // RemoveFromPolicyCollection: Remove From PolicyCollection
     ApiResponse<PolicyCollectionResponse> response = apiInstance.RemoveFromPolicyCollectionWithHttpInfo(code, removeFromPolicyCollectionRequest, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1431,7 +1431,7 @@ catch (ApiException e)
 # **UpdatePolicy**
 > PolicyResponse UpdatePolicy (string code, PolicyUpdateRequest policyUpdateRequest, string? scope = null)
 
-[EARLY ACCESS] UpdatePolicy: Update Policy
+UpdatePolicy: Update Policy
 
 Updates a Policy
 
@@ -1461,7 +1461,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] UpdatePolicy: Update Policy
+                // UpdatePolicy: Update Policy
                 PolicyResponse result = apiInstance.UpdatePolicy(code, policyUpdateRequest, scope);
                 Debug.WriteLine(result);
             }
@@ -1482,7 +1482,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] UpdatePolicy: Update Policy
+    // UpdatePolicy: Update Policy
     ApiResponse<PolicyResponse> response = apiInstance.UpdatePolicyWithHttpInfo(code, policyUpdateRequest, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1531,7 +1531,7 @@ catch (ApiException e)
 # **UpdatePolicyCollection**
 > PolicyCollectionResponse UpdatePolicyCollection (string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = null)
 
-[EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+UpdatePolicyCollection: Update PolicyCollection
 
 Updates a PolicyCollection
 
@@ -1561,7 +1561,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+                // UpdatePolicyCollection: Update PolicyCollection
                 PolicyCollectionResponse result = apiInstance.UpdatePolicyCollection(code, policyCollectionUpdateRequest, scope);
                 Debug.WriteLine(result);
             }
@@ -1582,7 +1582,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EARLY ACCESS] UpdatePolicyCollection: Update PolicyCollection
+    // UpdatePolicyCollection: Update PolicyCollection
     ApiResponse<PolicyCollectionResponse> response = apiInstance.UpdatePolicyCollectionWithHttpInfo(code, policyCollectionUpdateRequest, scope);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
