@@ -65,7 +65,7 @@ namespace Finbourne.Access.Sdk.Extensions
                 if (string.IsNullOrWhiteSpace(apiConfiguration.BaseUrl))
                     throw new ArgumentNullException(
                         nameof(apiConfiguration.BaseUrl),
-                        $"BaseUrl Uri missing. Please specify either FBN_FINBOURNE-ACCESS_API_URL environment variable or finbourne-accessUrl in secrets.json.");
+                        $"BaseUrl Uri missing. Please specify either FBN_ACCESS_URL environment variable or accessUrl in secrets.json.");
 
                 throw new UriFormatException($"Invalid Uri: {apiConfiguration.BaseUrl}");
             }
