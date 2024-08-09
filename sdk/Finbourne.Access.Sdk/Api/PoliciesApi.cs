@@ -268,7 +268,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
         ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies
+        /// ListPolicies: List Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies in a scope. For pagination support, use PagePolicies.
@@ -285,7 +285,7 @@ namespace Finbourne.Access.Sdk.Api
         List<PolicyResponse> ListPolicies(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies
+        /// ListPolicies: List Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies in a scope. For pagination support, use PagePolicies.
@@ -334,7 +334,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>ApiResponse of List&lt;PolicyCollectionResponse&gt;</returns>
         ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies
+        /// PagePolicies: Page Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies with pagination support.
@@ -350,7 +350,7 @@ namespace Finbourne.Access.Sdk.Api
         ResourceListOfPolicyResponse PagePolicies(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies
+        /// PagePolicies: Page Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies with pagination support.
@@ -741,7 +741,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies
+        /// ListPolicies: List Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies in a scope. For pagination support, use PagePolicies.
@@ -759,7 +759,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<List<PolicyResponse>> ListPoliciesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies
+        /// ListPolicies: List Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies in a scope. For pagination support, use PagePolicies.
@@ -811,7 +811,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <returns>Task of ApiResponse (List&lt;PolicyCollectionResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies
+        /// PagePolicies: Page Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies with pagination support.
@@ -828,7 +828,7 @@ namespace Finbourne.Access.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfPolicyResponse> PagePoliciesAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies
+        /// PagePolicies: Page Policies
         /// </summary>
         /// <remarks>
         /// Gets all Policies with pagination support.
@@ -2909,7 +2909,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
+        /// ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -2927,7 +2927,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
+        /// ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3024,7 +3024,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
+        /// ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3043,7 +3043,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
+        /// ListPolicies: List Policies Gets all Policies in a scope. For pagination support, use PagePolicies.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
@@ -3377,7 +3377,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies Gets all Policies with pagination support.
+        /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3394,7 +3394,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies Gets all Policies with pagination support.
+        /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3486,7 +3486,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies Gets all Policies with pagination support.
+        /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
@@ -3504,7 +3504,7 @@ namespace Finbourne.Access.Sdk.Api
         }
 
         /// <summary>
-        /// [EARLY ACCESS] PagePolicies: Page Policies Gets all Policies with pagination support.
+        /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
