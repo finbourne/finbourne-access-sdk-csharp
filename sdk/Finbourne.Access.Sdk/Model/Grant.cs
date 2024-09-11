@@ -29,22 +29,16 @@ namespace Finbourne.Access.Sdk.Model
     public enum Grant
     {
         /// <summary>
-        /// Enum Undefined for value: Undefined
-        /// </summary>
-        [EnumMember(Value = "Undefined")]
-        Undefined = 1,
-
-        /// <summary>
         /// Enum Allow for value: Allow
         /// </summary>
         [EnumMember(Value = "Allow")]
-        Allow = 2,
+        Allow = 1,
 
         /// <summary>
         /// Enum Deny for value: Deny
         /// </summary>
         [EnumMember(Value = "Deny")]
-        Deny = 3
+        Deny = 2
 
     }
 
