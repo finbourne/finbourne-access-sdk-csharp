@@ -49,11 +49,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var policyTemplateCreationRequest = new PolicyTemplateCreationRequest(); // PolicyTemplateCreationRequest | The definition of the policy template
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyTemplateResponse result = apiInstance.CreatePolicyTemplate(policyTemplateCreationRequest, opts: opts);
+
                 // [EXPERIMENTAL] CreatePolicyTemplate: Create a Policy Template
                 PolicyTemplateResponse result = apiInstance.CreatePolicyTemplate(policyTemplateCreationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -152,12 +163,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var code = "code_example";  // string | The code of the Policy Template
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the Policy Template (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeletePolicyTemplate(code, scope, opts: opts);
+
                 // [EXPERIMENTAL] DeletePolicyTemplate: Deleting a policy template
                 apiInstance.DeletePolicyTemplate(code, scope);
             }
@@ -253,12 +275,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var generatePolicyFromTemplateRequest = new GeneratePolicyFromTemplateRequest(); // GeneratePolicyFromTemplateRequest | Definition of the generate request
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // GeneratedPolicyComponents result = apiInstance.GeneratePolicyFromTemplate(generatePolicyFromTemplateRequest, asAt, opts: opts);
+
                 // [EXPERIMENTAL] GeneratePolicyFromTemplate: Generate policy from template
                 GeneratedPolicyComponents result = apiInstance.GeneratePolicyFromTemplate(generatePolicyFromTemplateRequest, asAt);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -358,6 +391,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var code = "code_example";  // string | The code of the Policy Template
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data. If not specified defaults to current time (optional) 
@@ -365,6 +406,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyTemplateResponse result = apiInstance.GetPolicyTemplate(code, asAt, scope, opts: opts);
+
                 // [EXPERIMENTAL] GetPolicyTemplate: Retrieving one Policy Template
                 PolicyTemplateResponse result = apiInstance.GetPolicyTemplate(code, asAt, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -465,6 +509,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
@@ -474,6 +526,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfPolicyTemplateResponse result = apiInstance.ListPolicyTemplates(asAt, sortBy, limit, filter, page, opts: opts);
+
                 // [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
                 ResourceListOfPolicyTemplateResponse result = apiInstance.ListPolicyTemplates(asAt, sortBy, limit, filter, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -576,12 +631,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PolicyTemplatesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PolicyTemplatesApi>();
             var code = "code_example";  // string | Code of the policy template to update
             var policyTemplateUpdateRequest = new PolicyTemplateUpdateRequest?(); // PolicyTemplateUpdateRequest? | Definition of the updated policy template (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyTemplateResponse result = apiInstance.UpdatePolicyTemplate(code, policyTemplateUpdateRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdatePolicyTemplate: Update a Policy Template
                 PolicyTemplateResponse result = apiInstance.UpdatePolicyTemplate(code, policyTemplateUpdateRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

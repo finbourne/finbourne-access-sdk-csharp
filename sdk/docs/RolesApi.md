@@ -50,6 +50,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var scope = "scope_example";  // string | The scope of the Role
             var code = "code_example";  // string | The code of the Role
@@ -57,6 +65,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.AddPolicyCollectionToRole(scope, code, addPolicyCollectionToRoleRequest, opts: opts);
+
                 // AddPolicyCollectionToRole: Add policy collections to a role
                 RoleResponse result = apiInstance.AddPolicyCollectionToRole(scope, code, addPolicyCollectionToRoleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -157,11 +168,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var roleCreationRequest = new RoleCreationRequest(); // RoleCreationRequest | The definition of the Role
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.CreateRole(roleCreationRequest, opts: opts);
+
                 // CreateRole: Create Role
                 RoleResponse result = apiInstance.CreateRole(roleCreationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -260,12 +282,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var code = "code_example";  // string | The code of the Role
             var scope = "scope_example";  // string? | >Optional. Will use default scope if not supplied. The scope of the Role (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteRole(code, scope, opts: opts);
+
                 // DeleteRole: Delete Role
                 apiInstance.DeleteRole(code, scope);
             }
@@ -361,6 +394,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var code = "code_example";  // string | The code of the Role
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -368,6 +409,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.GetRole(code, asAt, scope, opts: opts);
+
                 // GetRole: Get Role
                 RoleResponse result = apiInstance.GetRole(code, asAt, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -468,6 +512,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var scope = "scope_example";  // string? | Optional. Will use all scopes if not supplied. The requested scope (optional) 
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -478,6 +530,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<RoleResponse> result = apiInstance.ListRoles(scope, asAt, sortBy, start, limit, filter, opts: opts);
+
                 // ListRoles: List Roles
                 List<RoleResponse> result = apiInstance.ListRoles(scope, asAt, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -581,6 +636,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var scope = "scope_example";  // string | The scope of the Role
             var code = "code_example";  // string | The code of the Role
@@ -589,6 +652,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.RemovePolicyCollectionFromRole(scope, code, policycollectionscope, policycollectioncode, opts: opts);
+
                 // RemovePolicyCollectionFromRole: Remove policy collection from role
                 RoleResponse result = apiInstance.RemovePolicyCollectionFromRole(scope, code, policycollectionscope, policycollectioncode);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -690,6 +756,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<RolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var code = "code_example";  // string | The code of the Role
             var roleUpdateRequest = new RoleUpdateRequest(); // RoleUpdateRequest | The updated definition of the Role
@@ -701,6 +775,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // RoleResponse result = apiInstance.UpdateRole(code, roleUpdateRequest, scope, beforeScope, beforeCode, afterScope, afterCode, opts: opts);
+
                 // UpdateRole: Update Role
                 RoleResponse result = apiInstance.UpdateRole(code, roleUpdateRequest, scope, beforeScope, beforeCode, afterScope, afterCode);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

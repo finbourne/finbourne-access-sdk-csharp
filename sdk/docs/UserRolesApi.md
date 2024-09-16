@@ -52,12 +52,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the User Role to get
             var addPolicyCollectionToRoleRequest = new AddPolicyCollectionToRoleRequest(); // AddPolicyCollectionToRoleRequest | Dto of the policy collection to be added.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserRoleResponse result = apiInstance.AddPolicyCollectionToUserRole(userid, addPolicyCollectionToRoleRequest, opts: opts);
+
                 // AddPolicyCollectionToUserRole: Add a policy collection to a user-role
                 UserRoleResponse result = apiInstance.AddPolicyCollectionToUserRole(userid, addPolicyCollectionToRoleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -157,12 +168,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the User Role to get
             var addPolicyToRoleRequest = new AddPolicyToRoleRequest(); // AddPolicyToRoleRequest | Dto of the policy to be added.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserRoleResponse result = apiInstance.AddPolicyToUserRole(userid, addPolicyToRoleRequest, opts: opts);
+
                 // AddPolicyToUserRole: Add a policy to a user-role
                 UserRoleResponse result = apiInstance.AddPolicyToUserRole(userid, addPolicyToRoleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -262,11 +284,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userRoleCreationRequest = new UserRoleCreationRequest(); // UserRoleCreationRequest | Definition of the user-role to create.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserRoleResponse result = apiInstance.CreateUserRole(userRoleCreationRequest, opts: opts);
+
                 // CreateUserRole: Create a user-role
                 UserRoleResponse result = apiInstance.CreateUserRole(userRoleCreationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -365,11 +398,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the user-role to delete.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteUserRole(userid, opts: opts);
+
                 // DeleteUserRole: Delete a user-role
                 apiInstance.DeleteUserRole(userid);
             }
@@ -464,11 +508,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the user-role to get.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserRoleResponse result = apiInstance.GetUserRole(userid, opts: opts);
+
                 // GetUserRole: Get a user-role
                 UserRoleResponse result = apiInstance.GetUserRole(userid);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -567,6 +622,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
@@ -575,6 +638,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfUserRoleResponse result = apiInstance.ListUserRoles(filter, sortBy, limit, page, opts: opts);
+
                 // ListUserRoles: List user-roles
                 ResourceListOfUserRoleResponse result = apiInstance.ListUserRoles(filter, sortBy, limit, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -676,6 +742,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the User Role to get
             var policyCollectionScope = "policyCollectionScope_example";  // string | The scope of policy collection to remove from the User Role
@@ -683,6 +757,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.RemovePolicyCollectionFromUserRole(userid, policyCollectionScope, policyCollectionCode, opts: opts);
+
                 // RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
                 apiInstance.RemovePolicyCollectionFromUserRole(userid, policyCollectionScope, policyCollectionCode);
             }
@@ -779,6 +856,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the User Role to get
             var policyScope = "policyScope_example";  // string | The scope of the policy to remove from the User Role
@@ -786,6 +871,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.RemovePolicyFromUserRole(userid, policyScope, policyCode, opts: opts);
+
                 // RemovePolicyFromUserRole: Remove a policy from a user-role
                 apiInstance.RemovePolicyFromUserRole(userid, policyScope, policyCode);
             }
@@ -882,12 +970,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<UserRolesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<UserRolesApi>();
             var userid = "userid_example";  // string | Id of the user-role to be updated.
             var userRoleUpdateRequest = new UserRoleUpdateRequest(); // UserRoleUpdateRequest | Definition of the update to apply to the user-role.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UserRoleResponse result = apiInstance.UpdateUserRole(userid, userRoleUpdateRequest, opts: opts);
+
                 // UpdateUserRole: Update a user-role
                 UserRoleResponse result = apiInstance.UpdateUserRole(userid, userRoleUpdateRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

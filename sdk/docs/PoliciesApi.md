@@ -59,6 +59,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
             var addToPolicyCollectionRequest = new AddToPolicyCollectionRequest(); // AddToPolicyCollectionRequest | Ids of the PolicyCollections and/or Policies to add to the PolicyCollection
@@ -66,6 +74,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyCollectionResponse result = apiInstance.AddToPolicyCollection(code, addToPolicyCollectionRequest, scope, opts: opts);
+
                 // AddToPolicyCollection: Add To PolicyCollection
                 PolicyCollectionResponse result = apiInstance.AddToPolicyCollection(code, addToPolicyCollectionRequest, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -166,11 +177,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var policyCreationRequest = new PolicyCreationRequest(); // PolicyCreationRequest | The definition of the Policy
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyResponse result = apiInstance.CreatePolicy(policyCreationRequest, opts: opts);
+
                 // CreatePolicy: Create Policy
                 PolicyResponse result = apiInstance.CreatePolicy(policyCreationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -269,11 +291,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var policyCollectionCreationRequest = new PolicyCollectionCreationRequest(); // PolicyCollectionCreationRequest | The definition of the PolicyCollection
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyCollectionResponse result = apiInstance.CreatePolicyCollection(policyCollectionCreationRequest, opts: opts);
+
                 // CreatePolicyCollection: Create PolicyCollection
                 PolicyCollectionResponse result = apiInstance.CreatePolicyCollection(policyCollectionCreationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -372,12 +405,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the Policy
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the Policy (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeletePolicy(code, scope, opts: opts);
+
                 // DeletePolicy: Delete Policy
                 apiInstance.DeletePolicy(code, scope);
             }
@@ -473,12 +517,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional) 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeletePolicyCollection(code, scope, opts: opts);
+
                 // DeletePolicyCollection: Delete PolicyCollection
                 apiInstance.DeletePolicyCollection(code, scope);
             }
@@ -574,6 +629,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var requestBody = new Dictionary<string, EvaluationRequest>(); // Dictionary<string, EvaluationRequest> | A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).
             var applications = new List<string>?(); // List<string>? | Optional. The application type of the roles and policies to use when evaluating. (optional) 
@@ -581,6 +644,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, asAt, opts: opts);
+
                 // Evaluate: Run one or more evaluations
                 Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, asAt);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -681,6 +747,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var applications = new List<string>?(); // List<string>? | Optional. Filter on the applications that the policies apply to (optional) 
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -691,6 +765,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications, asAt, sortBy, start, limit, filter, opts: opts);
+
                 // GetOwnPolicies: Get policies of requesting user
                 List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications, asAt, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -794,6 +871,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the Policy
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -801,6 +886,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyResponse result = apiInstance.GetPolicy(code, asAt, scope, opts: opts);
+
                 // GetPolicy: Get Policy
                 PolicyResponse result = apiInstance.GetPolicy(code, asAt, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -901,6 +989,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -908,6 +1004,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, asAt, scope, opts: opts);
+
                 // GetPolicyCollection: Get PolicyCollection
                 PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, asAt, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1008,6 +1107,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The requested scope (optional) 
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -1018,6 +1125,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<PolicyResponse> result = apiInstance.ListPolicies(scope, asAt, sortBy, start, limit, filter, opts: opts);
+
                 // ListPolicies: List Policies
                 List<PolicyResponse> result = apiInstance.ListPolicies(scope, asAt, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1121,6 +1231,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The requested scope (optional) 
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
@@ -1131,6 +1249,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, asAt, sortBy, start, limit, filter, opts: opts);
+
                 // ListPolicyCollections: List PolicyCollections
                 List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, asAt, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1234,6 +1355,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. Not currently used. The AsAt date time of the data (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
@@ -1243,6 +1372,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfPolicyResponse result = apiInstance.PagePolicies(asAt, sortBy, limit, filter, page, opts: opts);
+
                 // PagePolicies: Page Policies
                 ResourceListOfPolicyResponse result = apiInstance.PagePolicies(asAt, sortBy, limit, filter, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1345,6 +1477,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. Not currently used. The AsAt date time of the data (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
@@ -1354,6 +1494,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(asAt, sortBy, limit, filter, page, opts: opts);
+
                 // PagePolicyCollections: Page PolicyCollections
                 ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(asAt, sortBy, limit, filter, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1456,6 +1599,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
             var removeFromPolicyCollectionRequest = new RemoveFromPolicyCollectionRequest(); // RemoveFromPolicyCollectionRequest | Ids of the PolicyCollections and/or Policies to remove from the PolicyCollection
@@ -1463,6 +1614,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyCollectionResponse result = apiInstance.RemoveFromPolicyCollection(code, removeFromPolicyCollectionRequest, scope, opts: opts);
+
                 // RemoveFromPolicyCollection: Remove From PolicyCollection
                 PolicyCollectionResponse result = apiInstance.RemoveFromPolicyCollection(code, removeFromPolicyCollectionRequest, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1563,6 +1717,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the Policy
             var policyUpdateRequest = new PolicyUpdateRequest(); // PolicyUpdateRequest | The updated definition of the Policy
@@ -1570,6 +1732,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyResponse result = apiInstance.UpdatePolicy(code, policyUpdateRequest, scope, opts: opts);
+
                 // UpdatePolicy: Update Policy
                 PolicyResponse result = apiInstance.UpdatePolicy(code, policyUpdateRequest, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -1670,6 +1835,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
             var policyCollectionUpdateRequest = new PolicyCollectionUpdateRequest(); // PolicyCollectionUpdateRequest | The updated definition of the PolicyCollection
@@ -1677,6 +1850,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // PolicyCollectionResponse result = apiInstance.UpdatePolicyCollection(code, policyCollectionUpdateRequest, scope, opts: opts);
+
                 // UpdatePolicyCollection: Update PolicyCollection
                 PolicyCollectionResponse result = apiInstance.UpdatePolicyCollection(code, policyCollectionUpdateRequest, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
