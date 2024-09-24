@@ -173,11 +173,10 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        Dictionary<string, EvaluationResponse> Evaluate(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Dictionary<string, EvaluationResponse> Evaluate(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// Evaluate: Run one or more evaluations
@@ -188,11 +187,10 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
         /// </summary>
@@ -201,15 +199,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        List<AttachedPolicyDefinitionResponse> GetOwnPolicies(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        List<AttachedPolicyDefinitionResponse> GetOwnPolicies(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
@@ -219,15 +212,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicy: Get Policy
         /// </summary>
@@ -236,12 +224,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyResponse</returns>
-        PolicyResponse GetPolicy(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        PolicyResponse GetPolicy(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicy: Get Policy
@@ -251,12 +238,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -265,12 +251,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyCollectionResponse</returns>
-        PolicyCollectionResponse GetPolicyCollection(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        PolicyCollectionResponse GetPolicyCollection(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
@@ -280,12 +265,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicies: List Policies
         /// </summary>
@@ -294,15 +278,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;PolicyResponse&gt;</returns>
-        List<PolicyResponse> ListPolicies(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        List<PolicyResponse> ListPolicies(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListPolicies: List Policies
@@ -312,15 +291,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyResponse&gt;</returns>
-        ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
         /// </summary>
@@ -329,15 +303,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;PolicyCollectionResponse&gt;</returns>
-        List<PolicyCollectionResponse> ListPolicyCollections(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        List<PolicyCollectionResponse> ListPolicyCollections(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
@@ -347,15 +316,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyCollectionResponse&gt;</returns>
-        ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicies: Page Policies
         /// </summary>
@@ -363,7 +327,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all Policies with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -371,7 +334,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfPolicyResponse</returns>
-        ResourceListOfPolicyResponse PagePolicies(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ResourceListOfPolicyResponse PagePolicies(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// PagePolicies: Page Policies
@@ -380,7 +343,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all Policies with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -388,7 +350,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyResponse</returns>
-        ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
@@ -396,7 +358,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all PolicyCollections with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -404,7 +365,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfPolicyCollectionResponse</returns>
-        ResourceListOfPolicyCollectionResponse PagePolicyCollections(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ResourceListOfPolicyCollectionResponse PagePolicyCollections(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
@@ -413,7 +374,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all PolicyCollections with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -421,7 +381,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyCollectionResponse</returns>
-        ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
@@ -670,12 +630,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, EvaluationResponse>> EvaluateAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Dictionary<string, EvaluationResponse>> EvaluateAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// Evaluate: Run one or more evaluations
@@ -686,12 +645,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, EvaluationResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
         /// </summary>
@@ -700,16 +658,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesAsync(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
@@ -719,16 +672,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;AttachedPolicyDefinitionResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicy: Get Policy
         /// </summary>
@@ -737,13 +685,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyResponse</returns>
-        System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicy: Get Policy
@@ -753,13 +700,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -768,13 +714,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyCollectionResponse</returns>
-        System.Threading.Tasks.Task<PolicyCollectionResponse> GetPolicyCollectionAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<PolicyCollectionResponse> GetPolicyCollectionAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
@@ -784,13 +729,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicies: List Policies
         /// </summary>
@@ -799,16 +743,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;PolicyResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<PolicyResponse>> ListPoliciesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<List<PolicyResponse>> ListPoliciesAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListPolicies: List Policies
@@ -818,16 +757,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
         /// </summary>
@@ -836,16 +770,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;PolicyCollectionResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<PolicyCollectionResponse>> ListPolicyCollectionsAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<List<PolicyCollectionResponse>> ListPolicyCollectionsAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
@@ -855,16 +784,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyCollectionResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicies: Page Policies
         /// </summary>
@@ -872,7 +796,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all Policies with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -881,7 +804,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfPolicyResponse</returns>
-        System.Threading.Tasks.Task<ResourceListOfPolicyResponse> PagePoliciesAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ResourceListOfPolicyResponse> PagePoliciesAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// PagePolicies: Page Policies
@@ -890,7 +813,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all Policies with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -899,7 +821,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
@@ -907,7 +829,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all PolicyCollections with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -916,7 +837,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfPolicyCollectionResponse</returns>
-        System.Threading.Tasks.Task<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
@@ -925,7 +846,6 @@ namespace Finbourne.Access.Sdk.Api
         /// Gets all PolicyCollections with pagination support.
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -934,7 +854,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
@@ -2251,13 +2171,12 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        public Dictionary<string, EvaluationResponse> Evaluate(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Dictionary<string, EvaluationResponse> Evaluate(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> localVarResponse = EvaluateWithHttpInfo(requestBody, applications, asAt, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> localVarResponse = EvaluateWithHttpInfo(requestBody, applications, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2267,11 +2186,10 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'requestBody' is set
             if (requestBody == null)
@@ -2321,10 +2239,6 @@ namespace Finbourne.Access.Sdk.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
             }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             localVarRequestOptions.Data = requestBody;
 
             localVarRequestOptions.Operation = "PoliciesApi.Evaluate";
@@ -2367,14 +2281,13 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, EvaluationResponse>> EvaluateAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Dictionary<string, EvaluationResponse>> EvaluateAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> localVarResponse = await EvaluateWithHttpInfoAsync(requestBody, applications, asAt, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> localVarResponse = await EvaluateWithHttpInfoAsync(requestBody, applications, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2384,12 +2297,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestBody">A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).</param>
         /// <param name="applications">Optional. The application type of the roles and policies to use when evaluating. (optional)</param>
-        /// <param name="asAt">Optional. The requested AsAt date of the entitlements (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, EvaluationResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'requestBody' is set
             if (requestBody == null)
@@ -2440,10 +2352,6 @@ namespace Finbourne.Access.Sdk.Api
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
             }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             localVarRequestOptions.Data = requestBody;
 
             localVarRequestOptions.Operation = "PoliciesApi.Evaluate";
@@ -2486,17 +2394,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        public List<AttachedPolicyDefinitionResponse> GetOwnPolicies(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public List<AttachedPolicyDefinitionResponse> GetOwnPolicies(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> localVarResponse = GetOwnPoliciesWithHttpInfo(applications, asAt, sortBy, start, limit, filter, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> localVarResponse = GetOwnPoliciesWithHttpInfo(applications, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2505,15 +2408,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -2552,26 +2450,6 @@ namespace Finbourne.Access.Sdk.Api
             if (applications != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.GetOwnPolicies";
@@ -2613,18 +2491,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesAsync(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> localVarResponse = await GetOwnPoliciesWithHttpInfoAsync(applications, asAt, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> localVarResponse = await GetOwnPoliciesWithHttpInfoAsync(applications, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2633,16 +2506,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applications">Optional. Filter on the applications that the policies apply to (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;AttachedPolicyDefinitionResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -2682,26 +2550,6 @@ namespace Finbourne.Access.Sdk.Api
             if (applications != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.GetOwnPolicies";
@@ -2744,14 +2592,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyResponse</returns>
-        public PolicyResponse GetPolicy(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public PolicyResponse GetPolicy(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = GetPolicyWithHttpInfo(code, asAt, scope, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = GetPolicyWithHttpInfo(code, scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2760,12 +2607,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -2808,10 +2654,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -2856,15 +2698,14 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyResponse</returns>
-        public async System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = await GetPolicyWithHttpInfoAsync(code, asAt, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = await GetPolicyWithHttpInfoAsync(code, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2873,13 +2714,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -2923,10 +2763,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -2972,14 +2808,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyCollectionResponse</returns>
-        public PolicyCollectionResponse GetPolicyCollection(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public PolicyCollectionResponse GetPolicyCollection(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> localVarResponse = GetPolicyCollectionWithHttpInfo(code, asAt, scope, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> localVarResponse = GetPolicyCollectionWithHttpInfo(code, scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2988,12 +2823,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -3036,10 +2870,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -3084,15 +2914,14 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyCollectionResponse</returns>
-        public async System.Threading.Tasks.Task<PolicyCollectionResponse> GetPolicyCollectionAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<PolicyCollectionResponse> GetPolicyCollectionAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> localVarResponse = await GetPolicyCollectionWithHttpInfoAsync(code, asAt, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> localVarResponse = await GetPolicyCollectionWithHttpInfoAsync(code, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3101,13 +2930,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the PolicyCollection</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -3151,10 +2979,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -3200,17 +3024,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;PolicyResponse&gt;</returns>
-        public List<PolicyResponse> ListPolicies(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public List<PolicyResponse> ListPolicies(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> localVarResponse = ListPoliciesWithHttpInfo(scope, asAt, sortBy, start, limit, filter, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> localVarResponse = ListPoliciesWithHttpInfo(scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -3219,15 +3038,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyResponse&gt;</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -3266,26 +3080,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.ListPolicies";
@@ -3327,18 +3121,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;PolicyResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PolicyResponse>> ListPoliciesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<List<PolicyResponse>> ListPoliciesAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> localVarResponse = await ListPoliciesWithHttpInfoAsync(scope, asAt, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> localVarResponse = await ListPoliciesWithHttpInfoAsync(scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3347,16 +3136,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -3396,26 +3180,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.ListPolicies";
@@ -3458,17 +3222,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;PolicyCollectionResponse&gt;</returns>
-        public List<PolicyCollectionResponse> ListPolicyCollections(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public List<PolicyCollectionResponse> ListPolicyCollections(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> localVarResponse = ListPolicyCollectionsWithHttpInfo(scope, asAt, sortBy, start, limit, filter, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> localVarResponse = ListPolicyCollectionsWithHttpInfo(scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -3477,15 +3236,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyCollectionResponse&gt;</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -3524,26 +3278,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.ListPolicyCollections";
@@ -3585,18 +3319,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;PolicyCollectionResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PolicyCollectionResponse>> ListPolicyCollectionsAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<List<PolicyCollectionResponse>> ListPolicyCollectionsAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> localVarResponse = await ListPolicyCollectionsWithHttpInfoAsync(scope, asAt, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> localVarResponse = await ListPolicyCollectionsWithHttpInfoAsync(scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3605,16 +3334,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use the default scope if not provided. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyCollectionResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -3654,26 +3378,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.ListPolicyCollections";
@@ -3715,7 +3419,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3723,9 +3426,9 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfPolicyResponse</returns>
-        public ResourceListOfPolicyResponse PagePolicies(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public ResourceListOfPolicyResponse PagePolicies(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> localVarResponse = PagePoliciesWithHttpInfo(asAt, sortBy, limit, filter, page, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> localVarResponse = PagePoliciesWithHttpInfo(sortBy, limit, filter, page, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -3733,7 +3436,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3741,7 +3443,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -3777,10 +3479,6 @@ namespace Finbourne.Access.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (sortBy != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
@@ -3836,7 +3534,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3845,9 +3542,9 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfPolicyResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfPolicyResponse> PagePoliciesAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<ResourceListOfPolicyResponse> PagePoliciesAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> localVarResponse = await PagePoliciesWithHttpInfoAsync(asAt, sortBy, limit, filter, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> localVarResponse = await PagePoliciesWithHttpInfoAsync(sortBy, limit, filter, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3855,7 +3552,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicies: Page Policies Gets all Policies with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3864,7 +3560,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -3901,10 +3597,6 @@ namespace Finbourne.Access.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (sortBy != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
@@ -3961,7 +3653,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3969,9 +3660,9 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfPolicyCollectionResponse</returns>
-        public ResourceListOfPolicyCollectionResponse PagePolicyCollections(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public ResourceListOfPolicyCollectionResponse PagePolicyCollections(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> localVarResponse = PagePolicyCollectionsWithHttpInfo(asAt, sortBy, limit, filter, page, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> localVarResponse = PagePolicyCollectionsWithHttpInfo(sortBy, limit, filter, page, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -3979,7 +3670,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -3987,7 +3677,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyCollectionResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -4023,10 +3713,6 @@ namespace Finbourne.Access.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (sortBy != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
@@ -4082,7 +3768,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -4091,9 +3776,9 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfPolicyCollectionResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> localVarResponse = await PagePolicyCollectionsWithHttpInfoAsync(asAt, sortBy, limit, filter, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> localVarResponse = await PagePolicyCollectionsWithHttpInfoAsync(sortBy, limit, filter, page, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4101,7 +3786,6 @@ namespace Finbourne.Access.Sdk.Api
         /// PagePolicyCollections: Page PolicyCollections Gets all PolicyCollections with pagination support.
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="asAt">Optional. Not currently used. The AsAt date time of the data (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional)</param>
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
@@ -4110,7 +3794,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyCollectionResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -4147,10 +3831,6 @@ namespace Finbourne.Access.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (sortBy != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));

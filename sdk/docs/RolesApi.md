@@ -358,7 +358,7 @@ void (empty response body)
 
 <a id="getrole"></a>
 # **GetRole**
-> RoleResponse GetRole (string code, DateTimeOffset? asAt = null, string? scope = null)
+> RoleResponse GetRole (string code, string? scope = null)
 
 GetRole: Get Role
 
@@ -404,16 +404,15 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var code = "code_example";  // string | The code of the Role
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
             var scope = "scope_example";  // string? | Optional. Will use default scope if not supplied. The scope of the Role (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // RoleResponse result = apiInstance.GetRole(code, asAt, scope, opts: opts);
+                // RoleResponse result = apiInstance.GetRole(code, scope, opts: opts);
 
                 // GetRole: Get Role
-                RoleResponse result = apiInstance.GetRole(code, asAt, scope);
+                RoleResponse result = apiInstance.GetRole(code, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -434,7 +433,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetRole: Get Role
-    ApiResponse<RoleResponse> response = apiInstance.GetRoleWithHttpInfo(code, asAt, scope);
+    ApiResponse<RoleResponse> response = apiInstance.GetRoleWithHttpInfo(code, scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -452,7 +451,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **code** | **string** | The code of the Role |  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
 | **scope** | **string?** | Optional. Will use default scope if not supplied. The scope of the Role | [optional]  |
 
 ### Return type
@@ -476,7 +474,7 @@ catch (ApiException e)
 
 <a id="listroles"></a>
 # **ListRoles**
-> List&lt;RoleResponse&gt; ListRoles (string? scope = null, DateTimeOffset? asAt = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
+> List&lt;RoleResponse&gt; ListRoles (string? scope = null)
 
 ListRoles: List Roles
 
@@ -522,19 +520,14 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<RolesApi>();
             var scope = "scope_example";  // string? | Optional. Will use all scopes if not supplied. The requested scope (optional) 
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
-            var sortBy = new List<string>?(); // List<string>? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
-            var start = 56;  // int? | Optional. When paginating, skip this number of results (optional) 
-            var limit = 56;  // int? | Optional. When paginating, limit the number of returned results to this many. (optional) 
-            var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // List<RoleResponse> result = apiInstance.ListRoles(scope, asAt, sortBy, start, limit, filter, opts: opts);
+                // List<RoleResponse> result = apiInstance.ListRoles(scope, opts: opts);
 
                 // ListRoles: List Roles
-                List<RoleResponse> result = apiInstance.ListRoles(scope, asAt, sortBy, start, limit, filter);
+                List<RoleResponse> result = apiInstance.ListRoles(scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -555,7 +548,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // ListRoles: List Roles
-    ApiResponse<List<RoleResponse>> response = apiInstance.ListRolesWithHttpInfo(scope, asAt, sortBy, start, limit, filter);
+    ApiResponse<List<RoleResponse>> response = apiInstance.ListRolesWithHttpInfo(scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -573,11 +566,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **scope** | **string?** | Optional. Will use all scopes if not supplied. The requested scope | [optional]  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
-| **sortBy** | [**List&lt;string&gt;?**](string.md) | Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
-| **start** | **int?** | Optional. When paginating, skip this number of results | [optional]  |
-| **limit** | **int?** | Optional. When paginating, limit the number of returned results to this many. | [optional]  |
-| **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
 
 ### Return type
 

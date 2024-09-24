@@ -593,7 +593,7 @@ void (empty response body)
 
 <a id="evaluate"></a>
 # **Evaluate**
-> Dictionary&lt;string, EvaluationResponse&gt; Evaluate (Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = null, DateTimeOffset? asAt = null)
+> Dictionary&lt;string, EvaluationResponse&gt; Evaluate (Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = null)
 
 Evaluate: Run one or more evaluations
 
@@ -640,15 +640,14 @@ namespace Examples
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var requestBody = new Dictionary<string, EvaluationRequest>(); // Dictionary<string, EvaluationRequest> | A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation).
             var applications = new List<string>?(); // List<string>? | Optional. The application type of the roles and policies to use when evaluating. (optional) 
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The requested AsAt date of the entitlements (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, asAt, opts: opts);
+                // Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, opts: opts);
 
                 // Evaluate: Run one or more evaluations
-                Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications, asAt);
+                Dictionary<string, EvaluationResponse> result = apiInstance.Evaluate(requestBody, applications);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -669,7 +668,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Evaluate: Run one or more evaluations
-    ApiResponse<Dictionary<string, EvaluationResponse>> response = apiInstance.EvaluateWithHttpInfo(requestBody, applications, asAt);
+    ApiResponse<Dictionary<string, EvaluationResponse>> response = apiInstance.EvaluateWithHttpInfo(requestBody, applications);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -688,7 +687,6 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **requestBody** | [**Dictionary&lt;string, EvaluationRequest&gt;**](EvaluationRequest.md) | A dictionary of evaluations, keyed using any arbitrary correlation id (it will be returned with the response for that evaluation). |  |
 | **applications** | [**List&lt;string&gt;?**](string.md) | Optional. The application type of the roles and policies to use when evaluating. | [optional]  |
-| **asAt** | **DateTimeOffset?** | Optional. The requested AsAt date of the entitlements | [optional]  |
 
 ### Return type
 
@@ -711,7 +709,7 @@ catch (ApiException e)
 
 <a id="getownpolicies"></a>
 # **GetOwnPolicies**
-> List&lt;AttachedPolicyDefinitionResponse&gt; GetOwnPolicies (List<string>? applications = null, DateTimeOffset? asAt = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
+> List&lt;AttachedPolicyDefinitionResponse&gt; GetOwnPolicies (List<string>? applications = null)
 
 GetOwnPolicies: Get policies of requesting user
 
@@ -757,19 +755,14 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var applications = new List<string>?(); // List<string>? | Optional. Filter on the applications that the policies apply to (optional) 
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
-            var sortBy = new List<string>?(); // List<string>? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
-            var start = 56;  // int? | Optional. When paginating, skip this number of results (optional) 
-            var limit = 56;  // int? | Optional. When paginating, limit the number of returned results to this many. (optional) 
-            var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications, asAt, sortBy, start, limit, filter, opts: opts);
+                // List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications, opts: opts);
 
                 // GetOwnPolicies: Get policies of requesting user
-                List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications, asAt, sortBy, start, limit, filter);
+                List<AttachedPolicyDefinitionResponse> result = apiInstance.GetOwnPolicies(applications);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -790,7 +783,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetOwnPolicies: Get policies of requesting user
-    ApiResponse<List<AttachedPolicyDefinitionResponse>> response = apiInstance.GetOwnPoliciesWithHttpInfo(applications, asAt, sortBy, start, limit, filter);
+    ApiResponse<List<AttachedPolicyDefinitionResponse>> response = apiInstance.GetOwnPoliciesWithHttpInfo(applications);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -808,11 +801,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **applications** | [**List&lt;string&gt;?**](string.md) | Optional. Filter on the applications that the policies apply to | [optional]  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
-| **sortBy** | [**List&lt;string&gt;?**](string.md) | Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
-| **start** | **int?** | Optional. When paginating, skip this number of results | [optional]  |
-| **limit** | **int?** | Optional. When paginating, limit the number of returned results to this many. | [optional]  |
-| **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
 
 ### Return type
 
@@ -835,7 +823,7 @@ catch (ApiException e)
 
 <a id="getpolicy"></a>
 # **GetPolicy**
-> PolicyResponse GetPolicy (string code, DateTimeOffset? asAt = null, string? scope = null)
+> PolicyResponse GetPolicy (string code, string? scope = null)
 
 GetPolicy: Get Policy
 
@@ -881,16 +869,15 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the Policy
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the Policy (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // PolicyResponse result = apiInstance.GetPolicy(code, asAt, scope, opts: opts);
+                // PolicyResponse result = apiInstance.GetPolicy(code, scope, opts: opts);
 
                 // GetPolicy: Get Policy
-                PolicyResponse result = apiInstance.GetPolicy(code, asAt, scope);
+                PolicyResponse result = apiInstance.GetPolicy(code, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -911,7 +898,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPolicy: Get Policy
-    ApiResponse<PolicyResponse> response = apiInstance.GetPolicyWithHttpInfo(code, asAt, scope);
+    ApiResponse<PolicyResponse> response = apiInstance.GetPolicyWithHttpInfo(code, scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -929,7 +916,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **code** | **string** | The code of the Policy |  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
 | **scope** | **string?** | Optional. Will use the default scope if not provided. The scope of the Policy | [optional]  |
 
 ### Return type
@@ -953,7 +939,7 @@ catch (ApiException e)
 
 <a id="getpolicycollection"></a>
 # **GetPolicyCollection**
-> PolicyCollectionResponse GetPolicyCollection (string code, DateTimeOffset? asAt = null, string? scope = null)
+> PolicyCollectionResponse GetPolicyCollection (string code, string? scope = null)
 
 GetPolicyCollection: Get PolicyCollection
 
@@ -999,16 +985,15 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the PolicyCollection
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the PolicyCollection (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, asAt, scope, opts: opts);
+                // PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, scope, opts: opts);
 
                 // GetPolicyCollection: Get PolicyCollection
-                PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, asAt, scope);
+                PolicyCollectionResponse result = apiInstance.GetPolicyCollection(code, scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -1029,7 +1014,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPolicyCollection: Get PolicyCollection
-    ApiResponse<PolicyCollectionResponse> response = apiInstance.GetPolicyCollectionWithHttpInfo(code, asAt, scope);
+    ApiResponse<PolicyCollectionResponse> response = apiInstance.GetPolicyCollectionWithHttpInfo(code, scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -1047,7 +1032,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **code** | **string** | The code of the PolicyCollection |  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
 | **scope** | **string?** | Optional. Will use the default scope if not provided. The scope of the PolicyCollection | [optional]  |
 
 ### Return type
@@ -1071,7 +1055,7 @@ catch (ApiException e)
 
 <a id="listpolicies"></a>
 # **ListPolicies**
-> List&lt;PolicyResponse&gt; ListPolicies (string? scope = null, DateTimeOffset? asAt = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
+> List&lt;PolicyResponse&gt; ListPolicies (string? scope = null)
 
 ListPolicies: List Policies
 
@@ -1117,19 +1101,14 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The requested scope (optional) 
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
-            var sortBy = new List<string>?(); // List<string>? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
-            var start = 56;  // int? | Optional. When paginating, skip this number of results (optional) 
-            var limit = 56;  // int? | Optional. When paginating, limit the number of returned results to this many. (optional) 
-            var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // List<PolicyResponse> result = apiInstance.ListPolicies(scope, asAt, sortBy, start, limit, filter, opts: opts);
+                // List<PolicyResponse> result = apiInstance.ListPolicies(scope, opts: opts);
 
                 // ListPolicies: List Policies
-                List<PolicyResponse> result = apiInstance.ListPolicies(scope, asAt, sortBy, start, limit, filter);
+                List<PolicyResponse> result = apiInstance.ListPolicies(scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -1150,7 +1129,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // ListPolicies: List Policies
-    ApiResponse<List<PolicyResponse>> response = apiInstance.ListPoliciesWithHttpInfo(scope, asAt, sortBy, start, limit, filter);
+    ApiResponse<List<PolicyResponse>> response = apiInstance.ListPoliciesWithHttpInfo(scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -1168,11 +1147,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **scope** | **string?** | Optional. Will use the default scope if not provided. The requested scope | [optional]  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
-| **sortBy** | [**List&lt;string&gt;?**](string.md) | Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
-| **start** | **int?** | Optional. When paginating, skip this number of results | [optional]  |
-| **limit** | **int?** | Optional. When paginating, limit the number of returned results to this many. | [optional]  |
-| **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
 
 ### Return type
 
@@ -1195,7 +1169,7 @@ catch (ApiException e)
 
 <a id="listpolicycollections"></a>
 # **ListPolicyCollections**
-> List&lt;PolicyCollectionResponse&gt; ListPolicyCollections (string? scope = null, DateTimeOffset? asAt = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
+> List&lt;PolicyCollectionResponse&gt; ListPolicyCollections (string? scope = null)
 
 ListPolicyCollections: List PolicyCollections
 
@@ -1241,19 +1215,14 @@ namespace Examples
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The requested scope (optional) 
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date time of the data (optional) 
-            var sortBy = new List<string>?(); // List<string>? | Optional. Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
-            var start = 56;  // int? | Optional. When paginating, skip this number of results (optional) 
-            var limit = 56;  // int? | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. (optional) 
-            var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, asAt, sortBy, start, limit, filter, opts: opts);
+                // List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, opts: opts);
 
                 // ListPolicyCollections: List PolicyCollections
-                List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope, asAt, sortBy, start, limit, filter);
+                List<PolicyCollectionResponse> result = apiInstance.ListPolicyCollections(scope);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -1274,7 +1243,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // ListPolicyCollections: List PolicyCollections
-    ApiResponse<List<PolicyCollectionResponse>> response = apiInstance.ListPolicyCollectionsWithHttpInfo(scope, asAt, sortBy, start, limit, filter);
+    ApiResponse<List<PolicyCollectionResponse>> response = apiInstance.ListPolicyCollectionsWithHttpInfo(scope);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -1292,11 +1261,6 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **scope** | **string?** | Optional. Will use the default scope if not provided. The requested scope | [optional]  |
-| **asAt** | **DateTimeOffset?** | Optional. The AsAt date time of the data | [optional]  |
-| **sortBy** | [**List&lt;string&gt;?**](string.md) | Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
-| **start** | **int?** | Optional. When paginating, skip this number of results | [optional]  |
-| **limit** | **int?** | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many. | [optional]  |
-| **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
 
 ### Return type
 
@@ -1319,7 +1283,7 @@ catch (ApiException e)
 
 <a id="pagepolicies"></a>
 # **PagePolicies**
-> ResourceListOfPolicyResponse PagePolicies (DateTimeOffset? asAt = null, string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
+> ResourceListOfPolicyResponse PagePolicies (string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
 
 PagePolicies: Page Policies
 
@@ -1364,7 +1328,6 @@ namespace Examples
             // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. Not currently used. The AsAt date time of the data (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
             var limit = 56;  // int? | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional) 
             var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
@@ -1373,10 +1336,10 @@ namespace Examples
             try
             {
                 // uncomment the below to set overrides at the request level
-                // ResourceListOfPolicyResponse result = apiInstance.PagePolicies(asAt, sortBy, limit, filter, page, opts: opts);
+                // ResourceListOfPolicyResponse result = apiInstance.PagePolicies(sortBy, limit, filter, page, opts: opts);
 
                 // PagePolicies: Page Policies
-                ResourceListOfPolicyResponse result = apiInstance.PagePolicies(asAt, sortBy, limit, filter, page);
+                ResourceListOfPolicyResponse result = apiInstance.PagePolicies(sortBy, limit, filter, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -1397,7 +1360,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // PagePolicies: Page Policies
-    ApiResponse<ResourceListOfPolicyResponse> response = apiInstance.PagePoliciesWithHttpInfo(asAt, sortBy, limit, filter, page);
+    ApiResponse<ResourceListOfPolicyResponse> response = apiInstance.PagePoliciesWithHttpInfo(sortBy, limit, filter, page);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -1414,7 +1377,6 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **asAt** | **DateTimeOffset?** | Optional. Not currently used. The AsAt date time of the data | [optional]  |
 | **sortBy** | **string?** | Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
 | **limit** | **int?** | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many | [optional]  |
 | **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
@@ -1441,7 +1403,7 @@ catch (ApiException e)
 
 <a id="pagepolicycollections"></a>
 # **PagePolicyCollections**
-> ResourceListOfPolicyCollectionResponse PagePolicyCollections (DateTimeOffset? asAt = null, string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
+> ResourceListOfPolicyCollectionResponse PagePolicyCollections (string? sortBy = null, int? limit = null, string? filter = null, string? page = null)
 
 PagePolicyCollections: Page PolicyCollections
 
@@ -1486,7 +1448,6 @@ namespace Examples
             // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<PoliciesApi>();
 
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
-            var asAt = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. Not currently used. The AsAt date time of the data (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
             var limit = 56;  // int? | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many (optional) 
             var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
@@ -1495,10 +1456,10 @@ namespace Examples
             try
             {
                 // uncomment the below to set overrides at the request level
-                // ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(asAt, sortBy, limit, filter, page, opts: opts);
+                // ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(sortBy, limit, filter, page, opts: opts);
 
                 // PagePolicyCollections: Page PolicyCollections
-                ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(asAt, sortBy, limit, filter, page);
+                ResourceListOfPolicyCollectionResponse result = apiInstance.PagePolicyCollections(sortBy, limit, filter, page);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -1519,7 +1480,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // PagePolicyCollections: Page PolicyCollections
-    ApiResponse<ResourceListOfPolicyCollectionResponse> response = apiInstance.PagePolicyCollectionsWithHttpInfo(asAt, sortBy, limit, filter, page);
+    ApiResponse<ResourceListOfPolicyCollectionResponse> response = apiInstance.PagePolicyCollectionsWithHttpInfo(sortBy, limit, filter, page);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -1536,7 +1497,6 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **asAt** | **DateTimeOffset?** | Optional. Not currently used. The AsAt date time of the data | [optional]  |
 | **sortBy** | **string?** | Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
 | **limit** | **int?** | Optional. 2000 if not provided. When paginating, limit the number of returned results to this many | [optional]  |
 | **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |

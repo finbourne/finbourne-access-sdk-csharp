@@ -120,12 +120,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        RoleResponse GetRole(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        RoleResponse GetRole(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRole: Get Role
@@ -135,12 +134,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        ApiResponse<RoleResponse> GetRoleWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<RoleResponse> GetRoleWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -149,15 +147,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;RoleResponse&gt;</returns>
-        List<RoleResponse> ListRoles(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        List<RoleResponse> ListRoles(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRoles: List Roles
@@ -167,15 +160,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
-        ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
@@ -348,13 +336,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetRole: Get Role
@@ -364,13 +351,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListRoles: List Roles
         /// </summary>
@@ -379,16 +365,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;RoleResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// ListRoles: List Roles
@@ -398,16 +379,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyCollectionFromRole: Remove policy collection from role
         /// </summary>
@@ -1282,14 +1258,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>RoleResponse</returns>
-        public RoleResponse GetRole(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public RoleResponse GetRole(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = GetRoleWithHttpInfo(code, asAt, scope, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = GetRoleWithHttpInfo(code, scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1298,12 +1273,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of RoleResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> GetRoleWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -1346,10 +1320,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -1394,15 +1364,14 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of RoleResponse</returns>
-        public async System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<RoleResponse> GetRoleAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await GetRoleWithHttpInfoAsync(code, asAt, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse> localVarResponse = await GetRoleWithHttpInfoAsync(code, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1411,13 +1380,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Role</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
         /// <param name="scope">Optional. Will use default scope if not supplied. The scope of the Role (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (RoleResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<RoleResponse>> GetRoleWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -1461,10 +1429,6 @@ namespace Finbourne.Access.Sdk.Api
             }
 
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
@@ -1510,17 +1474,12 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>List&lt;RoleResponse&gt;</returns>
-        public List<RoleResponse> ListRoles(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public List<RoleResponse> ListRoles(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = ListRolesWithHttpInfo(scope, asAt, sortBy, start, limit, filter, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = ListRolesWithHttpInfo(scope, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1529,15 +1488,10 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;RoleResponse&gt;</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> ListRolesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
 
@@ -1576,26 +1530,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "RolesApi.ListRoles";
@@ -1637,18 +1571,13 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of List&lt;RoleResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<List<RoleResponse>> ListRolesAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = await ListRolesWithHttpInfoAsync(scope, asAt, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>> localVarResponse = await ListRolesWithHttpInfoAsync(scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1657,16 +1586,11 @@ namespace Finbourne.Access.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Optional. Will use all scopes if not supplied. The requested scope (optional)</param>
-        /// <param name="asAt">Optional. The AsAt date time of the data (optional)</param>
-        /// <param name="sortBy">Optional. Order the results by these fields. Use use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
-        /// <param name="start">Optional. When paginating, skip this number of results (optional)</param>
-        /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;RoleResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<RoleResponse>>> ListRolesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Access.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Access.Sdk.Client.RequestOptions();
@@ -1706,26 +1630,6 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
-            }
-            if (asAt != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
-            }
-            if (sortBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
-            }
-            if (start != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
-            }
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (filter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
             localVarRequestOptions.Operation = "RolesApi.ListRoles";
