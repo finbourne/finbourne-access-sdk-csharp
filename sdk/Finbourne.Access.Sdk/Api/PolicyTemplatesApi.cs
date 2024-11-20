@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Access.Sdk.Client;
+using IApiAccessor = Finbourne.Access.Sdk.Client.IApiAccessor;
 using Finbourne.Access.Sdk.Extensions;
 using Finbourne.Access.Sdk.Client.Auth;
 using Finbourne.Access.Sdk.Model;
@@ -55,7 +55,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyTemplateResponse</returns>
-        ApiResponse<PolicyTemplateResponse> CreatePolicyTemplateWithHttpInfo(PolicyTemplateCreationRequest policyTemplateCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse> CreatePolicyTemplateWithHttpInfo(PolicyTemplateCreationRequest policyTemplateCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeletePolicyTemplate: Deleting a policy template
         /// </summary>
@@ -82,7 +82,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeletePolicyTemplateWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> DeletePolicyTemplateWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GeneratePolicyFromTemplate: Generate policy from template
         /// </summary>
@@ -109,7 +109,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of GeneratedPolicyComponents</returns>
-        ApiResponse<GeneratedPolicyComponents> GeneratePolicyFromTemplateWithHttpInfo(GeneratePolicyFromTemplateRequest generatePolicyFromTemplateRequest, DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<GeneratedPolicyComponents> GeneratePolicyFromTemplateWithHttpInfo(GeneratePolicyFromTemplateRequest generatePolicyFromTemplateRequest, DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetPolicyTemplate: Retrieving one Policy Template
         /// </summary>
@@ -138,7 +138,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyTemplateResponse</returns>
-        ApiResponse<PolicyTemplateResponse> GetPolicyTemplateWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse> GetPolicyTemplateWithHttpInfo(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
         /// </summary>
@@ -171,7 +171,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyTemplateResponse</returns>
-        ApiResponse<ResourceListOfPolicyTemplateResponse> ListPolicyTemplatesWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyTemplateResponse> ListPolicyTemplatesWithHttpInfo(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdatePolicyTemplate: Update a Policy Template
         /// </summary>
@@ -198,7 +198,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyTemplateResponse</returns>
-        ApiResponse<PolicyTemplateResponse> UpdatePolicyTemplateWithHttpInfo(string code, PolicyTemplateUpdateRequest? policyTemplateUpdateRequest = default(PolicyTemplateUpdateRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse> UpdatePolicyTemplateWithHttpInfo(string code, PolicyTemplateUpdateRequest? policyTemplateUpdateRequest = default(PolicyTemplateUpdateRequest?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -234,7 +234,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyTemplateResponse>> CreatePolicyTemplateWithHttpInfoAsync(PolicyTemplateCreationRequest policyTemplateCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse>> CreatePolicyTemplateWithHttpInfoAsync(PolicyTemplateCreationRequest policyTemplateCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeletePolicyTemplate: Deleting a policy template
         /// </summary>
@@ -263,7 +263,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePolicyTemplateWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> DeletePolicyTemplateWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GeneratePolicyFromTemplate: Generate policy from template
         /// </summary>
@@ -292,7 +292,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (GeneratedPolicyComponents)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeneratedPolicyComponents>> GeneratePolicyFromTemplateWithHttpInfoAsync(GeneratePolicyFromTemplateRequest generatePolicyFromTemplateRequest, DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<GeneratedPolicyComponents>> GeneratePolicyFromTemplateWithHttpInfoAsync(GeneratePolicyFromTemplateRequest generatePolicyFromTemplateRequest, DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetPolicyTemplate: Retrieving one Policy Template
         /// </summary>
@@ -323,7 +323,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyTemplateResponse>> GetPolicyTemplateWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse>> GetPolicyTemplateWithHttpInfoAsync(string code, DateTimeOffset? asAt = default(DateTimeOffset?), string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListPolicyTemplates: List Policy Templates
         /// </summary>
@@ -358,7 +358,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyTemplateResponse>> ListPolicyTemplatesWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyTemplateResponse>> ListPolicyTemplatesWithHttpInfoAsync(DateTimeOffset? asAt = default(DateTimeOffset?), string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdatePolicyTemplate: Update a Policy Template
         /// </summary>
@@ -387,7 +387,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyTemplateResponse>> UpdatePolicyTemplateWithHttpInfoAsync(string code, PolicyTemplateUpdateRequest? policyTemplateUpdateRequest = default(PolicyTemplateUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyTemplateResponse>> UpdatePolicyTemplateWithHttpInfoAsync(string code, PolicyTemplateUpdateRequest? policyTemplateUpdateRequest = default(PolicyTemplateUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

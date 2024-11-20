@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Access.Sdk.Client;
+using IApiAccessor = Finbourne.Access.Sdk.Client.IApiAccessor;
 using Finbourne.Access.Sdk.Extensions;
 using Finbourne.Access.Sdk.Client.Auth;
 using Finbourne.Access.Sdk.Model;
@@ -57,7 +57,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserRoleResponse</returns>
-        ApiResponse<UserRoleResponse> AddPolicyCollectionToUserRoleWithHttpInfo(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse> AddPolicyCollectionToUserRoleWithHttpInfo(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
@@ -84,7 +84,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserRoleResponse</returns>
-        ApiResponse<UserRoleResponse> AddPolicyToUserRoleWithHttpInfo(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse> AddPolicyToUserRoleWithHttpInfo(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateUserRole: Create a user-role
         /// </summary>
@@ -109,7 +109,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserRoleResponse</returns>
-        ApiResponse<UserRoleResponse> CreateUserRoleWithHttpInfo(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse> CreateUserRoleWithHttpInfo(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteUserRole: Delete a user-role
         /// </summary>
@@ -134,7 +134,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUserRoleWithHttpInfo(string userid, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> DeleteUserRoleWithHttpInfo(string userid, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetUserRole: Get a user-role
         /// </summary>
@@ -159,7 +159,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserRoleResponse</returns>
-        ApiResponse<UserRoleResponse> GetUserRoleWithHttpInfo(string userid, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse> GetUserRoleWithHttpInfo(string userid, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUserRoles: List user-roles
         /// </summary>
@@ -190,7 +190,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfUserRoleResponse</returns>
-        ApiResponse<ResourceListOfUserRoleResponse> ListUserRolesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfUserRoleResponse> ListUserRolesWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
@@ -219,7 +219,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemovePolicyCollectionFromUserRoleWithHttpInfo(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> RemovePolicyCollectionFromUserRoleWithHttpInfo(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
@@ -248,7 +248,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemovePolicyFromUserRoleWithHttpInfo(string userid, string policyScope, string policyCode, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> RemovePolicyFromUserRoleWithHttpInfo(string userid, string policyScope, string policyCode, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateUserRole: Update a user-role
         /// </summary>
@@ -275,7 +275,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UserRoleResponse</returns>
-        ApiResponse<UserRoleResponse> UpdateUserRoleWithHttpInfo(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse> UpdateUserRoleWithHttpInfo(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -313,7 +313,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> AddPolicyCollectionToUserRoleWithHttpInfoAsync(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse>> AddPolicyCollectionToUserRoleWithHttpInfoAsync(string userid, AddPolicyCollectionToRoleRequest addPolicyCollectionToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// AddPolicyToUserRole: Add a policy to a user-role
         /// </summary>
@@ -342,7 +342,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> AddPolicyToUserRoleWithHttpInfoAsync(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse>> AddPolicyToUserRoleWithHttpInfoAsync(string userid, AddPolicyToRoleRequest addPolicyToRoleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// CreateUserRole: Create a user-role
         /// </summary>
@@ -369,7 +369,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> CreateUserRoleWithHttpInfoAsync(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse>> CreateUserRoleWithHttpInfoAsync(UserRoleCreationRequest userRoleCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeleteUserRole: Delete a user-role
         /// </summary>
@@ -396,7 +396,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> DeleteUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetUserRole: Get a user-role
         /// </summary>
@@ -423,7 +423,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> GetUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse>> GetUserRoleWithHttpInfoAsync(string userid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListUserRoles: List user-roles
         /// </summary>
@@ -456,7 +456,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfUserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfUserRoleResponse>> ListUserRolesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfUserRoleResponse>> ListUserRolesWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), int? limit = default(int?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyCollectionFromUserRole: Remove a policy collection from a user-role
         /// </summary>
@@ -487,7 +487,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemovePolicyCollectionFromUserRoleWithHttpInfoAsync(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> RemovePolicyCollectionFromUserRoleWithHttpInfoAsync(string userid, string policyCollectionScope, string policyCollectionCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemovePolicyFromUserRole: Remove a policy from a user-role
         /// </summary>
@@ -518,7 +518,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemovePolicyFromUserRoleWithHttpInfoAsync(string userid, string policyScope, string policyCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> RemovePolicyFromUserRoleWithHttpInfoAsync(string userid, string policyScope, string policyCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdateUserRole: Update a user-role
         /// </summary>
@@ -547,7 +547,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UserRoleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoleResponse>> UpdateUserRoleWithHttpInfoAsync(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<UserRoleResponse>> UpdateUserRoleWithHttpInfoAsync(string userid, UserRoleUpdateRequest userRoleUpdateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

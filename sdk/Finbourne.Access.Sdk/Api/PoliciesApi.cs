@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Access.Sdk.Client;
+using IApiAccessor = Finbourne.Access.Sdk.Client.IApiAccessor;
 using Finbourne.Access.Sdk.Extensions;
 using Finbourne.Access.Sdk.Client.Auth;
 using Finbourne.Access.Sdk.Model;
@@ -59,7 +59,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> AddToPolicyCollectionWithHttpInfo(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> AddToPolicyCollectionWithHttpInfo(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// CreatePolicy: Create Policy
         /// </summary>
@@ -84,7 +84,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        ApiResponse<PolicyResponse> CreatePolicyWithHttpInfo(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> CreatePolicyWithHttpInfo(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
@@ -109,7 +109,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> CreatePolicyCollectionWithHttpInfo(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> CreatePolicyCollectionWithHttpInfo(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeletePolicy: Delete Policy
         /// </summary>
@@ -136,7 +136,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeletePolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> DeletePolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
@@ -163,7 +163,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeletePolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Object> DeletePolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// Evaluate: Run one or more evaluations
         /// </summary>
@@ -190,7 +190,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, EvaluationResponse&gt;</returns>
-        ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>> EvaluateWithHttpInfo(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
         /// </summary>
@@ -215,7 +215,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;AttachedPolicyDefinitionResponse&gt;</returns>
-        ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>> GetOwnPoliciesWithHttpInfo(List<string>? applications = default(List<string>?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicy: Get Policy
         /// </summary>
@@ -242,7 +242,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -269,7 +269,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> GetPolicyCollectionWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicies: List Policies
         /// </summary>
@@ -294,7 +294,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyResponse&gt;</returns>
-        ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>> ListPoliciesWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
         /// </summary>
@@ -319,7 +319,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of List&lt;PolicyCollectionResponse&gt;</returns>
-        ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>> ListPolicyCollectionsWithHttpInfo(string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicies: Page Policies
         /// </summary>
@@ -350,7 +350,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyResponse</returns>
-        ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse> PagePoliciesWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
@@ -381,7 +381,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfPolicyCollectionResponse</returns>
-        ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse> PagePolicyCollectionsWithHttpInfo(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
@@ -410,7 +410,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> RemoveFromPolicyCollectionWithHttpInfo(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> RemoveFromPolicyCollectionWithHttpInfo(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdatePolicy: Update Policy
         /// </summary>
@@ -439,7 +439,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        ApiResponse<PolicyResponse> UpdatePolicyWithHttpInfo(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> UpdatePolicyWithHttpInfo(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
@@ -468,7 +468,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyCollectionResponse</returns>
-        ApiResponse<PolicyCollectionResponse> UpdatePolicyCollectionWithHttpInfo(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse> UpdatePolicyCollectionWithHttpInfo(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -508,7 +508,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> AddToPolicyCollectionWithHttpInfoAsync(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> AddToPolicyCollectionWithHttpInfoAsync(string code, AddToPolicyCollectionRequest addToPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// CreatePolicy: Create Policy
         /// </summary>
@@ -535,7 +535,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> CreatePolicyWithHttpInfoAsync(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> CreatePolicyWithHttpInfoAsync(PolicyCreationRequest policyCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// CreatePolicyCollection: Create PolicyCollection
         /// </summary>
@@ -562,7 +562,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> CreatePolicyCollectionWithHttpInfoAsync(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> CreatePolicyCollectionWithHttpInfoAsync(PolicyCollectionCreationRequest policyCollectionCreationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeletePolicy: Delete Policy
         /// </summary>
@@ -591,7 +591,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> DeletePolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// DeletePolicyCollection: Delete PolicyCollection
         /// </summary>
@@ -620,7 +620,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Object>> DeletePolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// Evaluate: Run one or more evaluations
         /// </summary>
@@ -649,7 +649,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, EvaluationResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<Dictionary<string, EvaluationResponse>>> EvaluateWithHttpInfoAsync(Dictionary<string, EvaluationRequest> requestBody, List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetOwnPolicies: Get policies of requesting user
         /// </summary>
@@ -676,7 +676,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;AttachedPolicyDefinitionResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<AttachedPolicyDefinitionResponse>>> GetOwnPoliciesWithHttpInfoAsync(List<string>? applications = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicy: Get Policy
         /// </summary>
@@ -705,7 +705,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -734,7 +734,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> GetPolicyCollectionWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicies: List Policies
         /// </summary>
@@ -761,7 +761,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyResponse>>> ListPoliciesWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListPolicyCollections: List PolicyCollections
         /// </summary>
@@ -788,7 +788,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (List&lt;PolicyCollectionResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<List<PolicyCollectionResponse>>> ListPolicyCollectionsWithHttpInfoAsync(string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicies: Page Policies
         /// </summary>
@@ -821,7 +821,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyResponse>> PagePoliciesWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// PagePolicyCollections: Page PolicyCollections
         /// </summary>
@@ -854,7 +854,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfPolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<ResourceListOfPolicyCollectionResponse>> PagePolicyCollectionsWithHttpInfoAsync(string? sortBy = default(string?), int? limit = default(int?), string? filter = default(string?), string? page = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RemoveFromPolicyCollection: Remove From PolicyCollection
         /// </summary>
@@ -885,7 +885,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> RemoveFromPolicyCollectionWithHttpInfoAsync(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> RemoveFromPolicyCollectionWithHttpInfoAsync(string code, RemoveFromPolicyCollectionRequest removeFromPolicyCollectionRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdatePolicy: Update Policy
         /// </summary>
@@ -916,7 +916,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyResponse>> UpdatePolicyWithHttpInfoAsync(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> UpdatePolicyWithHttpInfoAsync(string code, PolicyUpdateRequest policyUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// UpdatePolicyCollection: Update PolicyCollection
         /// </summary>
@@ -947,7 +947,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyCollectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyCollectionResponse>> UpdatePolicyCollectionWithHttpInfoAsync(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyCollectionResponse>> UpdatePolicyCollectionWithHttpInfoAsync(string code, PolicyCollectionUpdateRequest policyCollectionUpdateRequest, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
