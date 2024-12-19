@@ -81,7 +81,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "InCaseInsensitive")]
         InCaseInsensitive = 9
-
     }
 
 }

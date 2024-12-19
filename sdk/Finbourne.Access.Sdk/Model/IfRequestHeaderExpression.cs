@@ -43,9 +43,9 @@ namespace Finbourne.Access.Sdk.Model
         /// Initializes a new instance of the <see cref="IfRequestHeaderExpression" /> class.
         /// </summary>
         /// <param name="headerName">headerName (required).</param>
-        /// <param name="_operator">_operator (required).</param>
+        /// <param name="varOperator">varOperator (required).</param>
         /// <param name="value">value.</param>
-        public IfRequestHeaderExpression(string headerName = default(string), TextOperator _operator = default(TextOperator), string value = default(string))
+        public IfRequestHeaderExpression(string headerName = default(string), TextOperator varOperator = default(TextOperator), string value = default(string))
         {
             // to ensure "headerName" is required (not null)
             if (headerName == null)
@@ -53,7 +53,7 @@ namespace Finbourne.Access.Sdk.Model
                 throw new ArgumentNullException("headerName is a required property for IfRequestHeaderExpression and cannot be null");
             }
             this.HeaderName = headerName;
-            this.Operator = _operator;
+            this.Operator = varOperator;
             this.Value = value;
         }
 

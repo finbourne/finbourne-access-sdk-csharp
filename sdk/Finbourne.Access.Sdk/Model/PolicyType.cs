@@ -45,7 +45,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "Licence")]
         Licence = 3
-
     }
 
 }

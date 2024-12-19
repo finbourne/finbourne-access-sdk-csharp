@@ -75,7 +75,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "Years")]
         Years = 8
-
     }
 
 }

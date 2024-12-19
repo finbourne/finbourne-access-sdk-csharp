@@ -46,7 +46,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "DeniedAsLicenceRequired")]
         DeniedAsLicenceRequired = 3
-
     }
 
 }

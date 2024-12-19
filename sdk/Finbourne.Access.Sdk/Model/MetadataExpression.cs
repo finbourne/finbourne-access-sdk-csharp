@@ -43,9 +43,9 @@ namespace Finbourne.Access.Sdk.Model
         /// Initializes a new instance of the <see cref="MetadataExpression" /> class.
         /// </summary>
         /// <param name="metadataKey">metadataKey (required).</param>
-        /// <param name="_operator">_operator (required).</param>
+        /// <param name="varOperator">varOperator (required).</param>
         /// <param name="textValue">textValue.</param>
-        public MetadataExpression(string metadataKey = default(string), Operator _operator = default(Operator), string textValue = default(string))
+        public MetadataExpression(string metadataKey = default(string), Operator varOperator = default(Operator), string textValue = default(string))
         {
             // to ensure "metadataKey" is required (not null)
             if (metadataKey == null)
@@ -53,7 +53,7 @@ namespace Finbourne.Access.Sdk.Model
                 throw new ArgumentNullException("metadataKey is a required property for MetadataExpression and cannot be null");
             }
             this.MetadataKey = metadataKey;
-            this.Operator = _operator;
+            this.Operator = varOperator;
             this.TextValue = textValue;
         }
 

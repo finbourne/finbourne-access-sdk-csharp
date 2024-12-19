@@ -39,7 +39,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "Deny")]
         Deny = 2
-
     }
 
 }

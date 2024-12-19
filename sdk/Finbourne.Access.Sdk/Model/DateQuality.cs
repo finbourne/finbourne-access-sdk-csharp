@@ -87,7 +87,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "IsAfter5pm")]
         IsAfter5pm = 10
-
     }
 
 }

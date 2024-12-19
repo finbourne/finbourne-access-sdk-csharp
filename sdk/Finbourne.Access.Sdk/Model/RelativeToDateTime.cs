@@ -69,7 +69,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "Exactly")]
         Exactly = 7
-
     }
 
 }

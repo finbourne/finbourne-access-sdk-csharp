@@ -46,9 +46,9 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="claimValueType">claimValueType.</param>
         /// <param name="claimIssuer">claimIssuer.</param>
         /// <param name="claimOriginalIssuer">claimOriginalIssuer.</param>
-        /// <param name="_operator">_operator (required).</param>
+        /// <param name="varOperator">varOperator (required).</param>
         /// <param name="value">value.</param>
-        public IfIdentityClaimExpression(string claimType = default(string), string claimValueType = default(string), string claimIssuer = default(string), string claimOriginalIssuer = default(string), TextOperator _operator = default(TextOperator), string value = default(string))
+        public IfIdentityClaimExpression(string claimType = default(string), string claimValueType = default(string), string claimIssuer = default(string), string claimOriginalIssuer = default(string), TextOperator varOperator = default(TextOperator), string value = default(string))
         {
             // to ensure "claimType" is required (not null)
             if (claimType == null)
@@ -56,7 +56,7 @@ namespace Finbourne.Access.Sdk.Model
                 throw new ArgumentNullException("claimType is a required property for IfIdentityClaimExpression and cannot be null");
             }
             this.ClaimType = claimType;
-            this.Operator = _operator;
+            this.Operator = varOperator;
             this.ClaimValueType = claimValueType;
             this.ClaimIssuer = claimIssuer;
             this.ClaimOriginalIssuer = claimOriginalIssuer;

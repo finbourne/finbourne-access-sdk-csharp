@@ -51,11 +51,11 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="id">id.</param>
         /// <param name="grant">grant.</param>
         /// <param name="selectors">selectors.</param>
-        /// <param name="_for">_for.</param>
-        /// <param name="_if">_if.</param>
+        /// <param name="varFor">varFor.</param>
+        /// <param name="varIf">varIf.</param>
         /// <param name="when">when.</param>
         /// <param name="how">how.</param>
-        public AttachedPolicyDefinitionResponse(RoleId sourceRole = default(RoleId), int roleHierarchyIndex = default(int), string description = default(string), List<string> applications = default(List<string>), PolicyType? policyType = default(PolicyType?), PolicyId id = default(PolicyId), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec))
+        public AttachedPolicyDefinitionResponse(RoleId sourceRole = default(RoleId), int roleHierarchyIndex = default(int), string description = default(string), List<string> applications = default(List<string>), PolicyType? policyType = default(PolicyType?), PolicyId id = default(PolicyId), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec))
         {
             this.SourceRole = sourceRole;
             this.RoleHierarchyIndex = roleHierarchyIndex;
@@ -65,8 +65,8 @@ namespace Finbourne.Access.Sdk.Model
             this.Id = id;
             this.Grant = grant;
             this.Selectors = selectors;
-            this.For = _for;
-            this.If = _if;
+            this.For = varFor;
+            this.If = varIf;
             this.When = when;
             this.How = how;
         }

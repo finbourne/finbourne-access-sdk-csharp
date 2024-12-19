@@ -46,12 +46,12 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="applications">Applications this policy is used with.</param>
         /// <param name="grant">grant (required).</param>
         /// <param name="selectors">Selectors that identify what resources this policy qualifies for (required).</param>
-        /// <param name="_for">\&quot;For Specification\&quot; for when the policy is to be applied.</param>
-        /// <param name="_if">\&quot;If Specification\&quot; for when the policy is to be applied.</param>
+        /// <param name="varFor">\&quot;For Specification\&quot; for when the policy is to be applied.</param>
+        /// <param name="varIf">\&quot;If Specification\&quot; for when the policy is to be applied.</param>
         /// <param name="when">when (required).</param>
         /// <param name="how">how.</param>
         /// <param name="templateMetadata">templateMetadata.</param>
-        public PolicyUpdateRequest(string description = default(string), List<string> applications = default(List<string>), Grant grant = default(Grant), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> _for = default(List<ForSpec>), List<IfExpression> _if = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata))
+        public PolicyUpdateRequest(string description = default(string), List<string> applications = default(List<string>), Grant grant = default(Grant), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata))
         {
             this.Grant = grant;
             // to ensure "selectors" is required (not null)
@@ -68,8 +68,8 @@ namespace Finbourne.Access.Sdk.Model
             this.When = when;
             this.Description = description;
             this.Applications = applications;
-            this.For = _for;
-            this.If = _if;
+            this.For = varFor;
+            this.If = varIf;
             this.How = how;
             this.TemplateMetadata = templateMetadata;
         }

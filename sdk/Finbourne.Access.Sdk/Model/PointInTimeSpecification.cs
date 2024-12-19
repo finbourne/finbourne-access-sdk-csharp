@@ -75,7 +75,6 @@ namespace Finbourne.Access.Sdk.Model
         /// </summary>
         [EnumMember(Value = "LastDayOfYear")]
         LastDayOfYear = 8
-
     }
 
 }
