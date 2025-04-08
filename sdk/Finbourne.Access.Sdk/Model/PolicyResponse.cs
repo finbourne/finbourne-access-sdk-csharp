@@ -48,7 +48,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="how">how.</param>
         /// <param name="templateMetadata">templateMetadata.</param>
         /// <param name="links">links.</param>
-        public PolicyResponse(PolicyId id = default(PolicyId), string description = default(string), List<string> applications = default(List<string>), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata), List<Link> links = default(List<Link>))
+        public PolicyResponse(PolicyId id = default(PolicyId), string description = default(string), List<string> applications = default(List<string>), Grant ?grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec), TemplateMetadata templateMetadata = default(TemplateMetadata), List<Link> links = default(List<Link>))
         {
             this.Id = id;
             this.Description = description;

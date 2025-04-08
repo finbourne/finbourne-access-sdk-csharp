@@ -38,7 +38,7 @@ namespace Finbourne.Access.Sdk.Model
         /// Initializes a new instance of the <see cref="EffectiveDateHasQuality" /> class.
         /// </summary>
         /// <param name="quality">quality.</param>
-        public EffectiveDateHasQuality(DateQuality? quality = default(DateQuality?))
+        public EffectiveDateHasQuality(DateQuality ?quality = default(DateQuality?))
         {
             this.Quality = quality;
         }

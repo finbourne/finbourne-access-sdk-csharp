@@ -55,7 +55,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="varIf">varIf.</param>
         /// <param name="when">when.</param>
         /// <param name="how">how.</param>
-        public AttachedPolicyDefinitionResponse(RoleId sourceRole = default(RoleId), int roleHierarchyIndex = default(int), string description = default(string), List<string> applications = default(List<string>), PolicyType? policyType = default(PolicyType?), PolicyId id = default(PolicyId), Grant? grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec))
+        public AttachedPolicyDefinitionResponse(RoleId sourceRole = default(RoleId), int roleHierarchyIndex = default(int), string description = default(string), List<string> applications = default(List<string>), PolicyType ?policyType = default(PolicyType?), PolicyId id = default(PolicyId), Grant ?grant = default(Grant?), List<SelectorDefinition> selectors = default(List<SelectorDefinition>), List<ForSpec> varFor = default(List<ForSpec>), List<IfExpression> varIf = default(List<IfExpression>), WhenSpec when = default(WhenSpec), HowSpec how = default(HowSpec))
         {
             this.SourceRole = sourceRole;
             this.RoleHierarchyIndex = roleHierarchyIndex;

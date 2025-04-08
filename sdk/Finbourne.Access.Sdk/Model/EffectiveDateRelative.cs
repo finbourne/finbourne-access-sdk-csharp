@@ -53,7 +53,7 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="adjustment">adjustment.</param>
         /// <param name="unit">unit.</param>
         /// <param name="relativeToDateTime">relativeToDateTime.</param>
-        public EffectiveDateRelative(PointInTimeSpecification? date = default(PointInTimeSpecification?), int adjustment = default(int), DateUnit? unit = default(DateUnit?), RelativeToDateTime? relativeToDateTime = default(RelativeToDateTime?))
+        public EffectiveDateRelative(PointInTimeSpecification ?date = default(PointInTimeSpecification?), int adjustment = default(int), DateUnit ?unit = default(DateUnit?), RelativeToDateTime ?relativeToDateTime = default(RelativeToDateTime?))
         {
             this.Date = date;
             this.Adjustment = adjustment;
