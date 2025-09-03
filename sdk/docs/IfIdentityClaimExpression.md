@@ -11,5 +11,23 @@ Name | Type | Description | Notes
 **Operator** | **TextOperator** |  | 
 **Value** | **string** |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+string claimType = "claimType";
+string claimValueType = "example claimValueType";
+string claimIssuer = "example claimIssuer";
+string claimOriginalIssuer = "example claimOriginalIssuer";
+string value = "example value";
+
+IfIdentityClaimExpression ifIdentityClaimExpressionInstance = new IfIdentityClaimExpression(
+    claimType: claimType,
+    claimValueType: claimValueType,
+    claimIssuer: claimIssuer,
+    claimOriginalIssuer: claimOriginalIssuer,
+    operator: operator,
+    value: value);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

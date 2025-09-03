@@ -17,5 +17,37 @@ Name | Type | Description | Notes
 **When** | [**WhenSpec**](WhenSpec.md) |  | [optional] 
 **How** | [**HowSpec**](HowSpec.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+RoleId? sourceRole = new RoleId();
+
+string description = "example description";
+List<string> applications = new List<string>();
+PolicyId? id = new PolicyId();
+
+List<SelectorDefinition> selectors = new List<SelectorDefinition>();
+List<ForSpec> for = new List<ForSpec>();
+List<IfExpression> if = new List<IfExpression>();
+WhenSpec? when = new WhenSpec();
+
+HowSpec? how = new HowSpec();
+
+
+AttachedPolicyDefinitionResponse attachedPolicyDefinitionResponseInstance = new AttachedPolicyDefinitionResponse(
+    sourceRole: sourceRole,
+    roleHierarchyIndex: roleHierarchyIndex,
+    description: description,
+    applications: applications,
+    policyType: policyType,
+    id: id,
+    grant: grant,
+    selectors: selectors,
+    for: for,
+    if: if,
+    when: when,
+    how: how);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

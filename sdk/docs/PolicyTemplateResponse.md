@@ -13,5 +13,26 @@ Name | Type | Description | Notes
 **Tags** | **List&lt;string&gt;** | List of policy types that this policy template covers | [optional] 
 **TemplatedSelectors** | [**List&lt;PolicyTemplatedSelector&gt;**](PolicyTemplatedSelector.md) | The selector definitions of policies included in this policy template | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+string displayName = "example displayName";
+string scope = "example scope";
+string code = "example code";
+string description = "example description";
+List<string> applications = new List<string>();
+List<string> tags = new List<string>();
+List<PolicyTemplatedSelector> templatedSelectors = new List<PolicyTemplatedSelector>();
+
+PolicyTemplateResponse policyTemplateResponseInstance = new PolicyTemplateResponse(
+    displayName: displayName,
+    scope: scope,
+    code: code,
+    description: description,
+    applications: applications,
+    tags: tags,
+    templatedSelectors: templatedSelectors);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

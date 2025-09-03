@@ -9,5 +9,24 @@ Name | Type | Description | Notes
 **IfIdentityScopeExpression** | [**IfIdentityScopeExpression**](IfIdentityScopeExpression.md) |  | [optional] 
 **IfFeatureChainExpression** | [**IfFeatureChainExpression**](IfFeatureChainExpression.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+IfRequestHeaderExpression? ifRequestHeaderExpression = new IfRequestHeaderExpression();
+
+IfIdentityClaimExpression? ifIdentityClaimExpression = new IfIdentityClaimExpression();
+
+IfIdentityScopeExpression? ifIdentityScopeExpression = new IfIdentityScopeExpression();
+
+IfFeatureChainExpression? ifFeatureChainExpression = new IfFeatureChainExpression();
+
+
+IfExpression ifExpressionInstance = new IfExpression(
+    ifRequestHeaderExpression: ifRequestHeaderExpression,
+    ifIdentityClaimExpression: ifIdentityClaimExpression,
+    ifIdentityScopeExpression: ifIdentityScopeExpression,
+    ifFeatureChainExpression: ifFeatureChainExpression);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

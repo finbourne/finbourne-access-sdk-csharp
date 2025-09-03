@@ -9,5 +9,18 @@ Name | Type | Description | Notes
 **Description** | **string** | Description of the policy template being craeted | 
 **TemplatedSelectors** | [**List&lt;PolicyTemplatedSelector&gt;**](PolicyTemplatedSelector.md) | The selector definitions of policies included in this policy template | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+string displayName = "displayName";
+string description = "description";
+List<PolicyTemplatedSelector> templatedSelectors = new List<PolicyTemplatedSelector>();
+
+PolicyTemplateUpdateRequest policyTemplateUpdateRequestInstance = new PolicyTemplateUpdateRequest(
+    displayName: displayName,
+    description: description,
+    templatedSelectors: templatedSelectors);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

@@ -11,5 +11,22 @@ Name | Type | Description | Notes
 **PolicyCollections** | [**List&lt;PolicyCollectionId&gt;**](PolicyCollectionId.md) | The identifiers of the PolicyCollections in this collection | [optional] 
 **Description** | **string** | A description of this policy collection | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+string code = "code";
+List<PolicyId> policies = new List<PolicyId>();
+Dictionary<string, List<EntitlementMetadata>> metadata = new Dictionary<string, List<EntitlementMetadata>>();
+List<PolicyCollectionId> policyCollections = new List<PolicyCollectionId>();
+string description = "example description";
+
+PolicyCollectionCreationRequest policyCollectionCreationRequestInstance = new PolicyCollectionCreationRequest(
+    code: code,
+    policies: policies,
+    metadata: metadata,
+    policyCollections: policyCollections,
+    description: description);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

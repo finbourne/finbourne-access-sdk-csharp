@@ -16,5 +16,33 @@ Name | Type | Description | Notes
 **How** | [**HowSpec**](HowSpec.md) |  | [optional] 
 **TemplateMetadata** | [**TemplateMetadata**](TemplateMetadata.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Access.Sdk.Model;
+using System;
 
+string code = "code";
+string description = "example description";
+List<string> applications = new List<string>();
+List<SelectorDefinition> selectors = new List<SelectorDefinition>();
+List<ForSpec> for = new List<ForSpec>();
+List<IfExpression> if = new List<IfExpression>();
+WhenSpec when = new WhenSpec();
+HowSpec? how = new HowSpec();
+
+TemplateMetadata? templateMetadata = new TemplateMetadata();
+
+
+PolicyCreationRequest policyCreationRequestInstance = new PolicyCreationRequest(
+    code: code,
+    description: description,
+    applications: applications,
+    grant: grant,
+    selectors: selectors,
+    for: for,
+    if: if,
+    when: when,
+    how: how,
+    templateMetadata: templateMetadata);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
