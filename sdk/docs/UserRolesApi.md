@@ -634,7 +634,7 @@ namespace Examples
             var filter = "filter_example";  // string? | Optional. Expression to filter the result set (optional) 
             var sortBy = "sortBy_example";  // string? | Optional. Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName (optional) 
             var limit = 56;  // int? | Optional. When paginating, limit the number of returned results to this many. (optional) 
-            var page = "page_example";  // string? | Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional) 
+            var page = "page_example";  // string? | Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional) 
 
             try
             {
@@ -683,7 +683,7 @@ catch (ApiException e)
 | **filter** | **string?** | Optional. Expression to filter the result set | [optional]  |
 | **sortBy** | **string?** | Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName | [optional]  |
 | **limit** | **int?** | Optional. When paginating, limit the number of returned results to this many. | [optional]  |
-| **page** | **string?** | Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. | [optional]  |
+| **page** | **string?** | Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. | [optional]  |
 
 ### Return type
 

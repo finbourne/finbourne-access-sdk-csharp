@@ -170,7 +170,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfUserRoleResponse</returns>
@@ -186,7 +186,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfUserRoleResponse</returns>
@@ -434,7 +434,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -451,7 +451,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -1756,7 +1756,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfUserRoleResponse</returns>
@@ -1773,7 +1773,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfUserRoleResponse</returns>
@@ -1871,7 +1871,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
@@ -1889,7 +1889,7 @@ namespace Finbourne.Access.Sdk.Api
         /// <param name="filter">Optional. Expression to filter the result set (optional)</param>
         /// <param name="sortBy">Optional. Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName (optional)</param>
         /// <param name="limit">Optional. When paginating, limit the number of returned results to this many. (optional)</param>
-        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve              the next page of data. (optional)</param>
+        /// <param name="page">Optional. Encoded page string returned from a previous search result that will retrieve             the next page of data. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
