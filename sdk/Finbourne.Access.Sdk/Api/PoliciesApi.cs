@@ -1152,6 +1152,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
             localVarRequestOptions.Data = addToPolicyCollectionRequest;
@@ -1805,6 +1806,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -2019,6 +2021,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -2237,6 +2240,7 @@ namespace Finbourne.Access.Sdk.Api
 
             if (applications != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
             }
             localVarRequestOptions.Data = requestBody;
@@ -2449,6 +2453,7 @@ namespace Finbourne.Access.Sdk.Api
 
             if (applications != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "applications", applications));
             }
 
@@ -2656,6 +2661,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -2872,6 +2878,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -3079,6 +3086,7 @@ namespace Finbourne.Access.Sdk.Api
 
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -3277,6 +3285,7 @@ namespace Finbourne.Access.Sdk.Api
 
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -3481,18 +3490,22 @@ namespace Finbourne.Access.Sdk.Api
 
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
 
@@ -3715,18 +3728,22 @@ namespace Finbourne.Access.Sdk.Api
 
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
 
@@ -3964,6 +3981,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
             localVarRequestOptions.Data = removeFromPolicyCollectionRequest;
@@ -4206,6 +4224,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
             localVarRequestOptions.Data = policyUpdateRequest;
@@ -4448,6 +4467,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
             localVarRequestOptions.Data = policyCollectionUpdateRequest;

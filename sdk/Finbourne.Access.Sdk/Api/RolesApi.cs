@@ -1107,6 +1107,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -1322,6 +1323,7 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -1529,6 +1531,7 @@ namespace Finbourne.Access.Sdk.Api
 
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
 
@@ -2014,22 +2017,27 @@ namespace Finbourne.Access.Sdk.Api
             localVarRequestOptions.PathParameters.Add("code", Finbourne.Access.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
             if (scope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
             }
             if (beforeScope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "beforeScope", beforeScope));
             }
             if (beforeCode != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "beforeCode", beforeCode));
             }
             if (afterScope != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "afterScope", afterScope));
             }
             if (afterCode != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "afterCode", afterCode));
             }
             localVarRequestOptions.Data = roleUpdateRequest;

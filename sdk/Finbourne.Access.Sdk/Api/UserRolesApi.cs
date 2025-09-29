@@ -1815,18 +1815,22 @@ namespace Finbourne.Access.Sdk.Api
 
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
 
