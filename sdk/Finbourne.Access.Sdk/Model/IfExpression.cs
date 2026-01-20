@@ -34,13 +34,13 @@ namespace Finbourne.Access.Sdk.Model
         /// <param name="ifRequestHeaderExpression">ifRequestHeaderExpression.</param>
         /// <param name="ifIdentityClaimExpression">ifIdentityClaimExpression.</param>
         /// <param name="ifIdentityScopeExpression">ifIdentityScopeExpression.</param>
-        /// <param name="ifFeatureChainExpression">ifFeatureChainExpression.</param>
-        public IfExpression(IfRequestHeaderExpression ifRequestHeaderExpression = default(IfRequestHeaderExpression), IfIdentityClaimExpression ifIdentityClaimExpression = default(IfIdentityClaimExpression), IfIdentityScopeExpression ifIdentityScopeExpression = default(IfIdentityScopeExpression), IfFeatureChainExpression ifFeatureChainExpression = default(IfFeatureChainExpression))
+        /// <param name="ifViaApiExpression">ifViaApiExpression.</param>
+        public IfExpression(IfRequestHeaderExpression ifRequestHeaderExpression = default(IfRequestHeaderExpression), IfIdentityClaimExpression ifIdentityClaimExpression = default(IfIdentityClaimExpression), IfIdentityScopeExpression ifIdentityScopeExpression = default(IfIdentityScopeExpression), IfViaApiExpression ifViaApiExpression = default(IfViaApiExpression))
         {
             this.IfRequestHeaderExpression = ifRequestHeaderExpression;
             this.IfIdentityClaimExpression = ifIdentityClaimExpression;
             this.IfIdentityScopeExpression = ifIdentityScopeExpression;
-            this.IfFeatureChainExpression = ifFeatureChainExpression;
+            this.IfViaApiExpression = ifViaApiExpression;
         }
 
         /// <summary>
@@ -62,10 +62,10 @@ namespace Finbourne.Access.Sdk.Model
         public IfIdentityScopeExpression IfIdentityScopeExpression { get; set; }
 
         /// <summary>
-        /// Gets or Sets IfFeatureChainExpression
+        /// Gets or Sets IfViaApiExpression
         /// </summary>
-        [DataMember(Name = "ifFeatureChainExpression", EmitDefaultValue = false)]
-        public IfFeatureChainExpression IfFeatureChainExpression { get; set; }
+        [DataMember(Name = "ifViaApiExpression", EmitDefaultValue = false)]
+        public IfViaApiExpression IfViaApiExpression { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,7 +78,7 @@ namespace Finbourne.Access.Sdk.Model
             sb.Append("  IfRequestHeaderExpression: ").Append(IfRequestHeaderExpression).Append("\n");
             sb.Append("  IfIdentityClaimExpression: ").Append(IfIdentityClaimExpression).Append("\n");
             sb.Append("  IfIdentityScopeExpression: ").Append(IfIdentityScopeExpression).Append("\n");
-            sb.Append("  IfFeatureChainExpression: ").Append(IfFeatureChainExpression).Append("\n");
+            sb.Append("  IfViaApiExpression: ").Append(IfViaApiExpression).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,9 +130,9 @@ namespace Finbourne.Access.Sdk.Model
                     this.IfIdentityScopeExpression.Equals(input.IfIdentityScopeExpression))
                 ) && 
                 (
-                    this.IfFeatureChainExpression == input.IfFeatureChainExpression ||
-                    (this.IfFeatureChainExpression != null &&
-                    this.IfFeatureChainExpression.Equals(input.IfFeatureChainExpression))
+                    this.IfViaApiExpression == input.IfViaApiExpression ||
+                    (this.IfViaApiExpression != null &&
+                    this.IfViaApiExpression.Equals(input.IfViaApiExpression))
                 );
         }
 
@@ -157,9 +157,9 @@ namespace Finbourne.Access.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.IfIdentityScopeExpression.GetHashCode();
                 }
-                if (this.IfFeatureChainExpression != null)
+                if (this.IfViaApiExpression != null)
                 {
-                    hashCode = (hashCode * 59) + this.IfFeatureChainExpression.GetHashCode();
+                    hashCode = (hashCode * 59) + this.IfViaApiExpression.GetHashCode();
                 }
                 return hashCode;
             }

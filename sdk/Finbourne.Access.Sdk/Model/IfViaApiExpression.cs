@@ -23,35 +23,35 @@ using OpenAPIDateConverter = Finbourne.Access.Sdk.Client.OpenAPIDateConverter;
 namespace Finbourne.Access.Sdk.Model
 {
     /// <summary>
-    /// IfFeatureChainExpression
+    /// IfViaApiExpression
     /// </summary>
-    [DataContract(Name = "IfFeatureChainExpression")]
-    public partial class IfFeatureChainExpression : IEquatable<IfFeatureChainExpression>, IValidatableObject
+    [DataContract(Name = "IfViaApiExpression")]
+    public partial class IfViaApiExpression : IEquatable<IfViaApiExpression>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="IfFeatureChainExpression" /> class.
+        /// Initializes a new instance of the <see cref="IfViaApiExpression" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected IfFeatureChainExpression() { }
+        protected IfViaApiExpression() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="IfFeatureChainExpression" /> class.
+        /// Initializes a new instance of the <see cref="IfViaApiExpression" /> class.
         /// </summary>
-        /// <param name="selectors">selectors (required).</param>
-        public IfFeatureChainExpression(List<SelectorDefinition> selectors = default(List<SelectorDefinition>))
+        /// <param name="apiFeatureCodes">apiFeatureCodes (required).</param>
+        public IfViaApiExpression(List<string> apiFeatureCodes = default(List<string>))
         {
-            // to ensure "selectors" is required (not null)
-            if (selectors == null)
+            // to ensure "apiFeatureCodes" is required (not null)
+            if (apiFeatureCodes == null)
             {
-                throw new ArgumentNullException("selectors is a required property for IfFeatureChainExpression and cannot be null");
+                throw new ArgumentNullException("apiFeatureCodes is a required property for IfViaApiExpression and cannot be null");
             }
-            this.Selectors = selectors;
+            this.ApiFeatureCodes = apiFeatureCodes;
         }
 
         /// <summary>
-        /// Gets or Sets Selectors
+        /// Gets or Sets ApiFeatureCodes
         /// </summary>
-        [DataMember(Name = "selectors", IsRequired = true, EmitDefaultValue = true)]
-        public List<SelectorDefinition> Selectors { get; set; }
+        [DataMember(Name = "apiFeatureCodes", IsRequired = true, EmitDefaultValue = true)]
+        public List<string> ApiFeatureCodes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +60,8 @@ namespace Finbourne.Access.Sdk.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class IfFeatureChainExpression {\n");
-            sb.Append("  Selectors: ").Append(Selectors).Append("\n");
+            sb.Append("class IfViaApiExpression {\n");
+            sb.Append("  ApiFeatureCodes: ").Append(ApiFeatureCodes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,15 +82,15 @@ namespace Finbourne.Access.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as IfFeatureChainExpression);
+            return this.Equals(input as IfViaApiExpression);
         }
 
         /// <summary>
-        /// Returns true if IfFeatureChainExpression instances are equal
+        /// Returns true if IfViaApiExpression instances are equal
         /// </summary>
-        /// <param name="input">Instance of IfFeatureChainExpression to be compared</param>
+        /// <param name="input">Instance of IfViaApiExpression to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(IfFeatureChainExpression input)
+        public bool Equals(IfViaApiExpression input)
         {
             if (input == null)
             {
@@ -98,10 +98,10 @@ namespace Finbourne.Access.Sdk.Model
             }
             return 
                 (
-                    this.Selectors == input.Selectors ||
-                    this.Selectors != null &&
-                    input.Selectors != null &&
-                    this.Selectors.SequenceEqual(input.Selectors)
+                    this.ApiFeatureCodes == input.ApiFeatureCodes ||
+                    this.ApiFeatureCodes != null &&
+                    input.ApiFeatureCodes != null &&
+                    this.ApiFeatureCodes.SequenceEqual(input.ApiFeatureCodes)
                 );
         }
 
@@ -114,9 +114,9 @@ namespace Finbourne.Access.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Selectors != null)
+                if (this.ApiFeatureCodes != null)
                 {
-                    hashCode = (hashCode * 59) + this.Selectors.GetHashCode();
+                    hashCode = (hashCode * 59) + this.ApiFeatureCodes.GetHashCode();
                 }
                 return hashCode;
             }

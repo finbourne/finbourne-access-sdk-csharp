@@ -1,19 +1,19 @@
-# Finbourne.Access.Sdk.Model.IfFeatureChainExpression
+# Finbourne.Access.Sdk.Model.IfViaApiExpression
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Selectors** | [**List&lt;SelectorDefinition&gt;**](SelectorDefinition.md) |  | 
+**ApiFeatureCodes** | **List&lt;string&gt;** |  | 
 
 ```csharp
 using Finbourne.Access.Sdk.Model;
 using System;
 
-List<SelectorDefinition> selectors = new List<SelectorDefinition>();
+List<string> apiFeatureCodes = new List<string>();
 
-IfFeatureChainExpression ifFeatureChainExpressionInstance = new IfFeatureChainExpression(
-    selectors: selectors);
+IfViaApiExpression ifViaApiExpressionInstance = new IfViaApiExpression(
+    apiFeatureCodes: apiFeatureCodes);
 ```
 
 [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
