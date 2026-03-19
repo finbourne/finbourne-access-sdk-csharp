@@ -225,10 +225,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyResponse</returns>
-        PolicyResponse GetPolicy(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        PolicyResponse GetPolicy(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicy: Get Policy
@@ -239,10 +240,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -686,11 +688,12 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyResponse</returns>
-        System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetPolicy: Get Policy
@@ -701,11 +704,12 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// GetPolicyCollection: Get PolicyCollection
         /// </summary>
@@ -2598,12 +2602,13 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>PolicyResponse</returns>
-        public PolicyResponse GetPolicy(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public PolicyResponse GetPolicy(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = GetPolicyWithHttpInfo(code, scope, opts: opts);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = GetPolicyWithHttpInfo(code, scope, asAt, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2613,10 +2618,11 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of PolicyResponse</returns>
-        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> GetPolicyWithHttpInfo(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -2663,6 +2669,11 @@ namespace Finbourne.Access.Sdk.Api
             {
 
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
+            }
+            if (asAt != null)
+            {
+
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.GetPolicy";
@@ -2705,13 +2716,14 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of PolicyResponse</returns>
-        public async System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<PolicyResponse> GetPolicyAsync(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = await GetPolicyWithHttpInfoAsync(code, scope, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse> localVarResponse = await GetPolicyWithHttpInfoAsync(code, scope, asAt, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2721,11 +2733,12 @@ namespace Finbourne.Access.Sdk.Api
         /// <exception cref="Finbourne.Access.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="code">The code of the Policy</param>
         /// <param name="scope">Optional. Will use the default scope if not provided. The scope of the Policy (optional)</param>
+        /// <param name="asAt">Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (PolicyResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Access.Sdk.Client.ApiResponse<PolicyResponse>> GetPolicyWithHttpInfoAsync(string code, string? scope = default(string?), DateTimeOffset? asAt = default(DateTimeOffset?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'code' is set
             if (code == null)
@@ -2772,6 +2785,10 @@ namespace Finbourne.Access.Sdk.Api
             if (scope != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "scope", scope));
+            }
+            if (asAt != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Finbourne.Access.Sdk.Client.ClientUtils.ParameterToMultiMap("", "asAt", asAt));
             }
 
             localVarRequestOptions.Operation = "PoliciesApi.GetPolicy";

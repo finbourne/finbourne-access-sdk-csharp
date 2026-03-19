@@ -823,7 +823,7 @@ catch (ApiException e)
 
 <a id="getpolicy"></a>
 # **GetPolicy**
-> PolicyResponse GetPolicy (string code, string? scope = null)
+> PolicyResponse GetPolicy (string code, string? scope = null, DateTimeOffset? asAt = null)
 
 GetPolicy: Get Policy
 
@@ -870,14 +870,15 @@ namespace Examples
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<PoliciesApi>();
             var code = "code_example";  // string | The code of the Policy
             var scope = "scope_example";  // string? | Optional. Will use the default scope if not provided. The scope of the Policy (optional) 
+            var asAt = DateTimeOffset.Parse("2013-10-20T19:20:30+01:00");  // DateTimeOffset? | Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version (optional) 
 
             try
             {
                 // uncomment the below to set overrides at the request level
-                // PolicyResponse result = apiInstance.GetPolicy(code, scope, opts: opts);
+                // PolicyResponse result = apiInstance.GetPolicy(code, scope, asAt, opts: opts);
 
                 // GetPolicy: Get Policy
-                PolicyResponse result = apiInstance.GetPolicy(code, scope);
+                PolicyResponse result = apiInstance.GetPolicy(code, scope, asAt);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
             catch (ApiException e)
@@ -898,7 +899,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // GetPolicy: Get Policy
-    ApiResponse<PolicyResponse> response = apiInstance.GetPolicyWithHttpInfo(code, scope);
+    ApiResponse<PolicyResponse> response = apiInstance.GetPolicyWithHttpInfo(code, scope, asAt);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
     Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
@@ -917,6 +918,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **code** | **string** | The code of the Policy |  |
 | **scope** | **string?** | Optional. Will use the default scope if not provided. The scope of the Policy | [optional]  |
+| **asAt** | **DateTimeOffset?** | Optional. The AsAt date and time at which to retrieve the Policy. Defaults to returning the latest version | [optional]  |
 
 ### Return type
 
