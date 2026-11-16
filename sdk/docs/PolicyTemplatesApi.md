@@ -79,7 +79,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreatePolicyTemplateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -193,7 +192,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeletePolicyTemplateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -306,7 +304,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GeneratePolicyFromTemplateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -423,7 +420,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetPolicyTemplateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -543,7 +539,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListPolicyTemplatesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -662,7 +657,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdatePolicyTemplateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

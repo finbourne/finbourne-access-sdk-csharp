@@ -82,7 +82,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the AddPolicyCollectionToRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -198,7 +197,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -312,7 +310,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeleteRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -425,7 +422,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -540,7 +536,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListRolesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -657,7 +652,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the RemovePolicyCollectionFromRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -780,7 +774,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdateRoleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
